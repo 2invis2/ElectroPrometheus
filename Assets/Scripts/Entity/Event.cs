@@ -14,6 +14,7 @@ public class Event
 {
     public int id;
     public int idNextStage;
+	public List<int> roomIDs;
     public List<string> types;
     public int turns;
     public string title;

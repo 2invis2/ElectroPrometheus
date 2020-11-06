@@ -11,21 +11,24 @@ public class XMLParser : MonoBehaviour
 {
     public static XMLParser ins;
 	
-	void Awake(){
+	void Awake()
+	{
 		ins = this;
 		LoadEvents();
 	}
 	
 	public EventDatabase eventDB;
 	
-	public void SaveEvents(){
+	public void SaveEvents()
+	{
 		XmlSerializer serializer = new XmlSerializer(typeof(EventDatabase));
 		FileStream stream = new FileStream(Application.dataPath + "/DataXML/eventlist.xml", FileMode.Create);
 		serializer.Serialize(stream, eventDB);
 		stream.Close();
 	}
 	
-	public void LoadEvents(){
+	public void LoadEvents()
+	{
 		XmlSerializer serializer = new XmlSerializer(typeof(EventDatabase));
 		FileStream stream = new FileStream(Application.dataPath + "/DataXML/eventlist.xml", FileMode.Open);
 		eventDB = serializer.Deserialize(stream) as EventDatabase;

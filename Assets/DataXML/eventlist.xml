@@ -4,6 +4,9 @@
     <Event>
       <id>0</id>
       <idNextStage>0</idNextStage>
+	  <roomIDs>
+	    <int>1</int>
+	  </roomIDs>
       <types>
         <string>Lalala</string>
         <string>Ololo</string>
