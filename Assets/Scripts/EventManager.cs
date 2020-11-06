@@ -8,13 +8,13 @@ public class EventManager : MonoBehaviour
 	
 	void Start()
 	{
-		initEvent(0);
+		initEventByID(0);
 		Debug.Log(eventData);
 	}
 	
 	void Update()
 	{
-		initEvent(0);
+		initEventByID(0);
 		Debug.Log(eventData);
 	}
 	
