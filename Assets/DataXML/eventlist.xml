@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<EventDatabase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <gameEvents>
+    <Event>
+      <id>0</id>
+      <idNextStage>0</idNextStage>
+      <types>
+        <string>Lalala</string>
+        <string>Ololo</string>
+        <string>Ulala</string>
+      </types>
+      <turns>3</turns>
+      <title>тестовая проблема</title>
+      <description>реши ченить</description>
+      <optionText>
+        <string>забью</string>
+        <string>ща</string>
+      </optionText>
+      <resultList>
+        <Result>
+          <changesOfResources>
+            <ResourceChange>
+              <resource>ENERGY</resource>
+              <deltaValue>-1</deltaValue>
+            </ResourceChange>
+            <ResourceChange>
+              <resource>OXYGEN</resource>
+              <deltaValue>-1</deltaValue>
+            </ResourceChange>
+          </changesOfResources>
+        </Result>
+        <Result>
+          <changesOfResources>
+            <ResourceChange>
+              <resource>ENERGY</resource>
+              <deltaValue>-2</deltaValue>
+            </ResourceChange>
+          </changesOfResources>
+        </Result>
+      </resultList>
+      <effectsText>
+        <string>фууу</string>
+        <string>маладец</string>
+      </effectsText>
+    </Event>
+  </gameEvents>
+</EventDatabase>
