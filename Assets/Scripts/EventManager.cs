@@ -8,19 +8,23 @@ public class EventManager : MonoBehaviour
 	
 	void Start()
 	{
-		initEventByID(0);
-		Debug.Log(eventData);
+		Debug.Log(eventData.title);
 	}
 	
 	void Update()
 	{
-		initEventByID(0);
-		Debug.Log(eventData);
+		initEventByTag("Ulala");
+		Debug.Log(eventData.title);
 	}
 	
 	
 	void initEventByID(int idOfEvent)
 	{		
 		eventData = XMLParser.ins.eventDB.gameEvents.Find(ev => ev.id == idOfEvent);
+	}
+	
+	void initEventByTag(string eventTag)
+	{
+		eventData = XMLParser.ins.eventDB.gameEvents.Find(ev => ev.types.Contains(eventTag));
 	}
 }
