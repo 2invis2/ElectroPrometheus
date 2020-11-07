@@ -3,8 +3,9 @@
 public class CameraControl : MonoBehaviour
 {
 
-	public int speed = 50;
+	public int speed = 10;
 	private int currentSpeed;
+	private int edgeScreen = 50;
 
 	void Start()
 	{
@@ -14,16 +15,16 @@ public class CameraControl : MonoBehaviour
 	void Update()
 	{
 		// лево
-		if ((int)Input.mousePosition.x < 2 || Input.GetAxis("Horizontal") < 0)
+		if ((int)Input.mousePosition.x < edgeScreen || Input.GetAxis("Horizontal") < 0)
 			transform.position -= transform.right * Time.deltaTime * currentSpeed;
 		// право
-		if ((int)Input.mousePosition.x > Screen.width - 2 || Input.GetAxis("Horizontal") > 0)
+		if ((int)Input.mousePosition.x > Screen.width - edgeScreen || Input.GetAxis("Horizontal") > 0)
 			transform.position += transform.right * Time.deltaTime * currentSpeed;
 		// верх 
-		if ((int)Input.mousePosition.y > Screen.height - 2 || Input.GetAxis("Vertical") > 0)
+		if ((int)Input.mousePosition.y > Screen.height - edgeScreen || Input.GetAxis("Vertical") > 0)
 			transform.position += transform.up * Time.deltaTime * currentSpeed;
 		// низ
-		if ((int)Input.mousePosition.y < 2 || Input.GetAxis("Vertical") < 0)
+		if ((int)Input.mousePosition.y < edgeScreen || Input.GetAxis("Vertical") < 0)
 			transform.position -= transform.up * Time.deltaTime * currentSpeed;
 	}
 	
