@@ -1,13 +1,13 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!95 &2692648082086265257
+--- !u!95 &5166388326009221220
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8198710532042890581}
+  m_GameObject: {fileID: 740160250207022475}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 8605e135709dc4d4eaf018fd2c5b6264, type: 2}
@@ -19,99 +19,99 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1001 &7266755664753739247
+--- !u!1001 &8159327684896184651
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1285956245197120277, guid: 9ca2d80975528014286fb653dc322bc8,
-        type: 3}
-      propertyPath: m_Name
-      value: RepairRoom
-      objectReference: {fileID: 0}
-    - target: {fileID: 5152687927713353059, guid: 9ca2d80975528014286fb653dc322bc8,
+    - target: {fileID: 3018340622413652249, guid: ba4bbf7bd2ea0d54982c65fc163df10d,
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5152687927713353059, guid: 9ca2d80975528014286fb653dc322bc8,
+    - target: {fileID: 3018340622413652249, guid: ba4bbf7bd2ea0d54982c65fc163df10d,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5152687927713353059, guid: 9ca2d80975528014286fb653dc322bc8,
+    - target: {fileID: 3018340622413652249, guid: ba4bbf7bd2ea0d54982c65fc163df10d,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5152687927713353059, guid: 9ca2d80975528014286fb653dc322bc8,
+    - target: {fileID: 3018340622413652249, guid: ba4bbf7bd2ea0d54982c65fc163df10d,
         type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5152687927713353059, guid: 9ca2d80975528014286fb653dc322bc8,
+    - target: {fileID: 3018340622413652249, guid: ba4bbf7bd2ea0d54982c65fc163df10d,
         type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5152687927713353059, guid: 9ca2d80975528014286fb653dc322bc8,
+    - target: {fileID: 3018340622413652249, guid: ba4bbf7bd2ea0d54982c65fc163df10d,
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5152687927713353059, guid: 9ca2d80975528014286fb653dc322bc8,
+    - target: {fileID: 3018340622413652249, guid: ba4bbf7bd2ea0d54982c65fc163df10d,
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5152687927713353059, guid: 9ca2d80975528014286fb653dc322bc8,
+    - target: {fileID: 3018340622413652249, guid: ba4bbf7bd2ea0d54982c65fc163df10d,
         type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5152687927713353059, guid: 9ca2d80975528014286fb653dc322bc8,
+    - target: {fileID: 3018340622413652249, guid: ba4bbf7bd2ea0d54982c65fc163df10d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5152687927713353059, guid: 9ca2d80975528014286fb653dc322bc8,
+    - target: {fileID: 3018340622413652249, guid: ba4bbf7bd2ea0d54982c65fc163df10d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5152687927713353059, guid: 9ca2d80975528014286fb653dc322bc8,
+    - target: {fileID: 3018340622413652249, guid: ba4bbf7bd2ea0d54982c65fc163df10d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6229621115835737913, guid: 9ca2d80975528014286fb653dc322bc8,
+    - target: {fileID: 4041213160235846467, guid: ba4bbf7bd2ea0d54982c65fc163df10d,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 4985900921581255318, guid: 1ebc34faf89490d4c8341cacd2ff1b5e,
         type: 3}
-    - target: {fileID: 6229621115835737913, guid: 9ca2d80975528014286fb653dc322bc8,
+    - target: {fileID: 4041213160235846467, guid: ba4bbf7bd2ea0d54982c65fc163df10d,
         type: 3}
       propertyPath: m_Size.x
       value: 19.199999
       objectReference: {fileID: 0}
-    - target: {fileID: 6229621115835737913, guid: 9ca2d80975528014286fb653dc322bc8,
+    - target: {fileID: 4041213160235846467, guid: ba4bbf7bd2ea0d54982c65fc163df10d,
         type: 3}
       propertyPath: m_Size.y
       value: 10.799999
       objectReference: {fileID: 0}
-    - target: {fileID: 6229621115835737913, guid: 9ca2d80975528014286fb653dc322bc8,
+    - target: {fileID: 4041213160235846467, guid: ba4bbf7bd2ea0d54982c65fc163df10d,
         type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9203643462748983151, guid: ba4bbf7bd2ea0d54982c65fc163df10d,
+        type: 3}
+      propertyPath: m_Name
+      value: RepairRoom
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9ca2d80975528014286fb653dc322bc8, type: 3}
---- !u!1 &8198710532042890581 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: ba4bbf7bd2ea0d54982c65fc163df10d, type: 3}
+--- !u!1 &740160250207022475 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1521961643148302522, guid: 9ca2d80975528014286fb653dc322bc8,
+  m_CorrespondingSourceObject: {fileID: 8898640760313443520, guid: ba4bbf7bd2ea0d54982c65fc163df10d,
     type: 3}
-  m_PrefabInstance: {fileID: 7266755664753739247}
+  m_PrefabInstance: {fileID: 8159327684896184651}
   m_PrefabAsset: {fileID: 0}
