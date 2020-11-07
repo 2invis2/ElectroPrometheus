@@ -25,12 +25,14 @@ public class Room : MonoBehaviour
 	{
 		eventUIControlsOBJ = Instantiate(prefabOfEventUI, this.transform).gameObject;
 		eventUIControls = eventUIControlsOBJ.GetComponentInChildren<EventUIControls>();
+		eventUIControls.initUI(roomEvent);
 	}
 
     public void InitEvent(Event selectedEvent)
     {
         roomEvent = selectedEvent;
         eventStatus = roomEvent.turns;
+		InitEventUI();
 		
     }
 
