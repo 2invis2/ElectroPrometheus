@@ -15,6 +15,7 @@ public class EventUIControls : MonoBehaviour
     void Start()
     {
 		cnt = 0;
+		StateChange();
     }
 
     // Update is called once per frame
@@ -61,6 +62,7 @@ public class EventUIControls : MonoBehaviour
 			if (state == "Select")
 				state = "OnlyAlarm";
 		StateChange();
+		GameObject.FindWithTag("MainCamera").GetComponent<CameraControl>().ClipCamera(this.gameObject.transform);
 	}
 	
 	public void OnClickOption(int optionNum)
@@ -71,24 +73,32 @@ public class EventUIControls : MonoBehaviour
 		Debug.Log("event " + eventID + " resolved by choosing " + optionNum);
 	}
 	
+	public void OnClickExit()
+	{
+		GameObject.FindWithTag("MainCamera").GetComponent<CameraControl>().UnclipCamera();
+		Destroy(this.gameObject);
+	}
 	
 	public void StateChange()
 	{
 		GameObject selection = transform.Find("SelectionScreen").gameObject;
 		GameObject alarm = transform.Find("Alarm").gameObject;
 		GameObject result = transform.Find("Solved").gameObject;
+		GameObject titleName = transform.Find("Title").gameObject;
 		if (state == "OnlyAlarm")
 		{
 			alarm.SetActive(true);
 			selection.SetActive(false);
 			result.SetActive(false);
+			titleName.SetActive(false);
 		}
 		else
 			if (state == "Select")
 			{
-				alarm.SetActive(true);
+				alarm.SetActive(false);
 				selection.SetActive(true);
 				result.SetActive(false);
+				titleName.SetActive(true);
 			}
 			else
 				if (state == "Result")
@@ -96,6 +106,7 @@ public class EventUIControls : MonoBehaviour
 					alarm.SetActive(false);
 					selection.SetActive(false);
 					result.SetActive(true);
+					titleName.SetActive(true);
 				}
 	}
 }
