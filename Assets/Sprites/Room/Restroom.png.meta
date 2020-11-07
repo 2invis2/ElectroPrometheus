@@ -17,6 +17,21 @@ TextureImporter:
   - first:
       213: 6920669133157647353
     second: Restroom_4
+  - first:
+      213: 4060212039383000534
+    second: Restroom_0
+  - first:
+      213: 262534520986963619
+    second: Restroom_1
+  - first:
+      213: 8288159175734374604
+    second: Restroom_2
+  - first:
+      213: 6038479037966626251
+    second: Restroom_3
+  - first:
+      213: 9212364775825674713
+    second: Restroom_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -105,10 +120,10 @@ TextureImporter:
       name: Restroom_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2160
-        width: 1920
-        height: 1080
+        x: 890
+        y: 2324
+        width: 793
+        height: 475
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -116,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97fd88b634870bc80800000000000000
-      internalID: -8309009081536290951
+      spriteID: 6d520308655c85830800000000000000
+      internalID: 4060212039383000534
       vertices: []
       indices: 
       edges: []
@@ -126,10 +141,10 @@ TextureImporter:
       name: Restroom_1
       rect:
         serializedVersion: 2
-        x: 1920
-        y: 2160
-        width: 1920
-        height: 1080
+        x: 2811
+        y: 2324
+        width: 792
+        height: 475
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,8 +152,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d81ce15e7fd73e00800000000000000
-      internalID: 1024533173883377881
+      spriteID: 3ae84b081c5b4a300800000000000000
+      internalID: 262534520986963619
       vertices: []
       indices: 
       edges: []
@@ -147,10 +162,10 @@ TextureImporter:
       name: Restroom_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1080
-        width: 1920
-        height: 1080
+        x: 891
+        y: 1244
+        width: 792
+        height: 475
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,8 +173,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b781af4c1c90c1a20800000000000000
-      internalID: 3034310976778934395
+      spriteID: cc0ba879bd4750370800000000000000
+      internalID: 8288159175734374604
       vertices: []
       indices: 
       edges: []
@@ -168,10 +183,10 @@ TextureImporter:
       name: Restroom_3
       rect:
         serializedVersion: 2
-        x: 1920
-        y: 1080
-        width: 1920
-        height: 1080
+        x: 2811
+        y: 1244
+        width: 792
+        height: 475
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,8 +194,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb5c9a527e5945c10800000000000000
-      internalID: 2041421351107544508
+      spriteID: bcda4a911bcfcc350800000000000000
+      internalID: 6038479037966626251
       vertices: []
       indices: 
       edges: []
@@ -189,10 +204,10 @@ TextureImporter:
       name: Restroom_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 1080
+        x: 891
+        y: 164
+        width: 792
+        height: 475
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,8 +215,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f34fd9c8e72b0060800000000000000
-      internalID: 6920669133157647353
+      spriteID: 9d1196454f4e8df70800000000000000
+      internalID: 9212364775825674713
       vertices: []
       indices: 
       edges: []

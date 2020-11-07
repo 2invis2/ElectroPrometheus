@@ -17,6 +17,21 @@ TextureImporter:
   - first:
       213: 9006521156833817766
     second: Cryostorage_4
+  - first:
+      213: 9122759128584170181
+    second: Cryostorage_0
+  - first:
+      213: 4994759751041247907
+    second: Cryostorage_1
+  - first:
+      213: 7437636561508113903
+    second: Cryostorage_2
+  - first:
+      213: 3118868792869942629
+    second: Cryostorage_3
+  - first:
+      213: -516374722157992374
+    second: Cryostorage_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -105,10 +120,10 @@ TextureImporter:
       name: Cryostorage_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2160
-        width: 1920
-        height: 1080
+        x: 404
+        y: 2318
+        width: 709
+        height: 820
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -116,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da87bcc859f8c23d0800000000000000
-      internalID: -3230048960256444243
+      spriteID: 5ca26bec71d8a9e70800000000000000
+      internalID: 9122759128584170181
       vertices: []
       indices: 
       edges: []
@@ -126,10 +141,10 @@ TextureImporter:
       name: Cryostorage_1
       rect:
         serializedVersion: 2
-        x: 1920
-        y: 2160
-        width: 1920
-        height: 1080
+        x: 2324
+        y: 2318
+        width: 709
+        height: 820
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,8 +152,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf8cda58deebad7c0800000000000000
-      internalID: -4045711387879683844
+      spriteID: 3aa6b3bb783f05540800000000000000
+      internalID: 4994759751041247907
       vertices: []
       indices: 
       edges: []
@@ -147,10 +162,10 @@ TextureImporter:
       name: Cryostorage_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1080
-        width: 1920
-        height: 1080
+        x: 404
+        y: 1238
+        width: 709
+        height: 820
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,8 +173,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e67d7627f1b93430800000000000000
-      internalID: 3763234638705555171
+      spriteID: fed1621eb0bc73760800000000000000
+      internalID: 7437636561508113903
       vertices: []
       indices: 
       edges: []
@@ -168,10 +183,10 @@ TextureImporter:
       name: Cryostorage_3
       rect:
         serializedVersion: 2
-        x: 1920
-        y: 1080
-        width: 1920
-        height: 1080
+        x: 2324
+        y: 1238
+        width: 707
+        height: 820
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,8 +194,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 898556108e5ca1390800000000000000
-      internalID: -7846741800493164392
+      spriteID: 565701484a2784b20800000000000000
+      internalID: 3118868792869942629
       vertices: []
       indices: 
       edges: []
@@ -189,10 +204,10 @@ TextureImporter:
       name: Cryostorage_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 1080
+        x: 404
+        y: 158
+        width: 707
+        height: 820
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,8 +215,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a4be1706479dfc70800000000000000
-      internalID: 9006521156833817766
+      spriteID: a4628c21de775d8f0800000000000000
+      internalID: -516374722157992374
       vertices: []
       indices: 
       edges: []

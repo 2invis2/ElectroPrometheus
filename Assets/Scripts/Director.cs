@@ -32,6 +32,7 @@ public class Director : MonoBehaviour
 		}
 		int randomFreeRoom1 = freeRooms()[random1];
 		int randomFreeRoom2 = freeRooms()[random2];
+		Debug.Log(" спаун в комнатах - " + randomFreeRoom1 + " " + randomFreeRoom2);
 		CreateEventByType(TypeEvent.GREEN, rooms[randomFreeRoom1]);
 		CreateEventByType(TypeEvent.GREEN, rooms[randomFreeRoom2]);
 		

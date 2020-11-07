@@ -23,7 +23,6 @@ public class Room : MonoBehaviour
         resourceManager = resourceManagerOBJ.GetComponent<ResourceManager>();
         eventManager = eventManagerOBJ.GetComponent<EventManager>();
 		director = directorOBJ.GetComponent<Director>();
-		inEvent = false;
     }
 	
 	private void InitEventUI()
@@ -79,8 +78,8 @@ public class Room : MonoBehaviour
 	{
 		if (inEvent)
 		{
-			roomEvent.turns--;
-			if (roomEvent.turns == 0)
+			eventStatus--;
+			if (eventStatus == 0)
 				if (roomEvent.id == roomEvent.idNextStage)
 				{
 					ChangeResource(0);
@@ -88,8 +87,13 @@ public class Room : MonoBehaviour
 					inEvent = false;
 				}
 				else
-					eventManager.initEventByID(roomEvent.idNextStage, this.gameObject);
-			Debug.Log("eventupdated" + this.gameObject.name);
+					{
+						Destroy(eventUIControlsOBJ);
+						inEvent = false;
+						eventManager.initEventByID(roomEvent.idNextStage, this.gameObject);
+						
+					}
+			Debug.Log("eventupdated " + this.gameObject.name);
 		}
 	}
 

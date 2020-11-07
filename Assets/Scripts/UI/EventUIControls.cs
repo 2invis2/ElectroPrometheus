@@ -62,7 +62,6 @@ public class EventUIControls : MonoBehaviour
 		foreach (string option in options)
 			{
 				string searchRoot = "SelectionScreen/Solution"+cnt+"/SolutionText";
-				Debug.Log(searchRoot);
 				transform.Find(searchRoot).gameObject.GetComponent<UnityEngine.UI.Text>().text = option;
 				cnt++;
 			}
