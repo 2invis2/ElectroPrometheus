@@ -38,8 +38,8 @@ public class Director : MonoBehaviour
 			int randomFreeRoom1 = freeRooms[random1];
 			int randomFreeRoom2 = freeRooms[random2];
 			Debug.Log(" спаун в комнатах - " + randomFreeRoom1 + " " + randomFreeRoom2);
-			CreateEventByType(TypeEvent.GREEN, rooms[randomFreeRoom1]);
-			CreateEventByType(TypeEvent.GREEN, rooms[randomFreeRoom2]);
+			CreateEventByTypeRandom(TypeEvent.GREEN, rooms[randomFreeRoom1]);
+			CreateEventByTypeRandom(TypeEvent.GREEN, rooms[randomFreeRoom2]);
 		}
 		else
 			if(freeRooms.Count == 13-eventLimit)
@@ -47,7 +47,7 @@ public class Director : MonoBehaviour
 				int random1 = Random.Range(0, (freeRooms.Count-1));
 				int randomFreeRoom1 = freeRooms[random1];
 				Debug.Log(" спаун в комнате - " + randomFreeRoom1);
-				CreateEventByType(TypeEvent.GREEN, rooms[randomFreeRoom1]);
+				CreateEventByTypeRandom(TypeEvent.GREEN, rooms[randomFreeRoom1]);
 			}
 		
 
@@ -56,6 +56,11 @@ public class Director : MonoBehaviour
     private void CreateEventByType(TypeEvent type, GameObject roomTo)
     {
         eventManager.initEventByTag(type.ToString(), roomTo);
+    }
+	
+	private void CreateEventByTypeRandom(TypeEvent type, GameObject roomTo)
+    {
+        eventManager.initEventByTagRandom(type.ToString(), roomTo);
     }
 	
 	private List<int> FreeRooms()

@@ -50,6 +50,11 @@ public class XMLParser : MonoBehaviour
 		return instanceParser.eventDB.gameEvents.Find(ev => ev.types.Contains(neededTag));
 	}
     
+	public static Event GetEventByTagRandom(string neededTag)
+	{
+		 List<Event> suitable = instanceParser.eventDB.gameEvents.FindAll(ev => ev.types.Contains(neededTag));
+		 return suitable[Random.Range(0, suitable.Count-1)];
+	}
 }
 
 

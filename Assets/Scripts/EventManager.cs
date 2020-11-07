@@ -19,4 +19,11 @@ public class EventManager : MonoBehaviour
 		eventData.gameEvents.Add(thisEvent);
 		roomTo.GetComponent<Room>().InitEvent(thisEvent);
 	}
+	
+	public void initEventByTagRandom(string eventTag, GameObject roomTo)
+	{
+		Event thisEvent = XMLParser.GetEventByTagRandom(eventTag);
+		eventData.gameEvents.Add(thisEvent);
+		roomTo.GetComponent<Room>().InitEvent(thisEvent);
+	}
 }
