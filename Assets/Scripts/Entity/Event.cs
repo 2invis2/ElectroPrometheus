@@ -3,13 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class EventDatabase
-{
-    public List<Event> gameEvents = new List<Event>();
-}
-
-
-[System.Serializable]
 public class Event
 {
     public int id;
@@ -24,16 +17,14 @@ public class Event
     public List<string> effectsText;
 }
 
+[System.Serializable]
+public class EventDatabase
+{
+    public List<Event> gameEvents = new List<Event>();
+}
 
 [System.Serializable]
 public class Result
 {
-    public List<ResourceChange> changesOfResources;
-}
-
-[System.Serializable]
-public class ResourceChange
-{
-    public Resource resource;
-    public int deltaValue;
+    public List<ResourceItem> changesOfResources;
 }
