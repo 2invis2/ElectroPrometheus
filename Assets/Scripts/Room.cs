@@ -4,20 +4,21 @@ using UnityEngine;
 
 public class Room : MonoBehaviour
 {
-    public ResourceManager resourceManager;
-    public EventManager eventManager;
-    public EventUIControls eventUIControls;
-    //public ResourceUIControls resourceUiControls;
+	public GameObject resourceManagerOBJ;
+    public GameObject eventManagerOBJ;
+    public GameObject eventUIControlsOBJ;
+	private ResourceManager resourceManager;
+    private EventManager eventManager;
+    private EventUIControls eventUIControls;
     public Event roomEvent;
     public int eventStatus;
     public string descriptionRoom;
 
     private void Awake()
     {
-        resourceManager = GetComponent<ResourceManager>();
-        eventManager = GetComponent<EventManager>();
-        eventUIControls = GetComponentInChildren<EventUIControls>();
-        //resourceUiControls = GetComponentInChildren<ResourceUIControls>();
+        resourceManager = resourceManagerOBJ.GetComponent<ResourceManager>();
+        eventManager = eventManagerOBJ.GetComponent<EventManager>();
+        eventUIControls = eventUIControlsOBJ.GetComponentInChildren<EventUIControls>();
     }
 
     public void InitEvent(Event selectedEvent)
@@ -26,7 +27,7 @@ public class Room : MonoBehaviour
         eventStatus = roomEvent.turns;
     }
 
-    public string ShowMasageDescription()
+    public string ShowMessageDescription()
     {
         return roomEvent.description;
     }
@@ -36,7 +37,7 @@ public class Room : MonoBehaviour
         return roomEvent.optionText;
     }
 
-    public string UpdateMasage(int indexOption)
+    public string UpdateMessage(int indexOption)
     {
         return roomEvent.effectsText[indexOption];
     }
