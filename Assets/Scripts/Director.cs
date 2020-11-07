@@ -24,16 +24,23 @@ public class Director : MonoBehaviour
         {
             room.GetComponent<Room>().UpdateEvent();			
         }
-		int randomAAAA = Random.Range(0, (freeRooms().Count-1));
-		int randomFreeRoomI = freeRooms()[randomAAAA];
-		CreateEventByType(TypeEvent.GREEN, rooms[randomFreeRoomI]);
+		int random1 = Random.Range(0, (freeRooms().Count-1));
+		int random2 = Random.Range(0, (freeRooms().Count-1));
+		while (random1 == random2)
+		{
+			random2 = Random.Range(0, (freeRooms().Count-1));
+		}
+		int randomFreeRoom1 = freeRooms()[random1];
+		int randomFreeRoom2 = freeRooms()[random2];
+		CreateEventByType(TypeEvent.GREEN, rooms[randomFreeRoom1]);
+		CreateEventByType(TypeEvent.GREEN, rooms[randomFreeRoom2]);
 		
 
     }
 
     private void CreateEventByType(TypeEvent type, GameObject roomTo)
     {
-        eventManager.initEventByTag("GREEN", roomTo);
+        eventManager.initEventByTag(type.ToString(), roomTo);
     }
 	
 	private List<int> freeRooms()

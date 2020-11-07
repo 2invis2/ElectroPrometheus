@@ -1094,6 +1094,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomID: 0
   eventID: 0
+  redSprite: {fileID: -1367686069894889062, guid: eb933100124519c4ca914f5efd8bbefe,
+    type: 3}
+  greenSprite: {fileID: 3833889047690720166, guid: eb933100124519c4ca914f5efd8bbefe,
+    type: 3}
+  purpleSprite: {fileID: 4378202361113353473, guid: eb933100124519c4ca914f5efd8bbefe,
+    type: 3}
+  yellowSprite: {fileID: -3285296820954937117, guid: eb933100124519c4ca914f5efd8bbefe,
+    type: 3}
 --- !u!1 &8946648121002201012
 GameObject:
   m_ObjectHideFlags: 0

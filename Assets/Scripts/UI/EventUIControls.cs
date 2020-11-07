@@ -6,6 +6,10 @@ public class EventUIControls : MonoBehaviour
 {
     public int roomID;
 	public int eventID;
+	public Sprite redSprite;
+	public Sprite greenSprite;
+	public Sprite purpleSprite;
+	public Sprite yellowSprite;
 	private string state = "OnlyAlarm";
 	private List<string> results;
 	private int cnt;
@@ -36,8 +40,25 @@ public class EventUIControls : MonoBehaviour
 		List<string> options = new List<string>(localEvent.optionText);
 		results = new List<string> (localEvent.effectsText);	
 		transform.Find("Title/TitleText").gameObject.GetComponent<UnityEngine.UI.Text>().text = title;
-		transform.Find("SelectionScreen/Problem/ProblemText").gameObject.GetComponent<UnityEngine.UI.Text>().text = description;
-		int cnt = 0;
+		transform.Find("SelectionScreen/Problem/ProblemText").gameObject.GetComponent<UnityEngine.UI.Text>().text = description;	
+		
+		switch (localEvent.types[0])
+		{
+			case "GREEN":
+				this.gameObject.transform.Find("Alarm").gameObject.GetComponent<UnityEngine.UI.Image>().sprite = greenSprite;
+				break;
+			case "YELLOW":
+				this.gameObject.transform.Find("Alarm").gameObject.GetComponent<UnityEngine.UI.Image>().sprite = yellowSprite;
+				break;
+			case "RED":
+				this.gameObject.transform.Find("Alarm").gameObject.GetComponent<UnityEngine.UI.Image>().sprite = redSprite;
+				break;
+			case "PURPLE":
+				this.gameObject.transform.Find("Alarm").gameObject.GetComponent<UnityEngine.UI.Image>().sprite = purpleSprite;		
+				break;
+		}
+		
+		int cnt = 0;	
 		foreach (string option in options)
 			{
 				string searchRoot = "SelectionScreen/Solution"+cnt+"/SolutionText";
