@@ -16,16 +16,16 @@ public class EventManager : MonoBehaviour
 	void Update()
 	{
 		initEventByTag("Ulala");
-		Debug.Log(eventData);
+		//Debug.Log(eventData);
 	}
 	
 	
-	void initEventByID(int idOfEvent)
+	public void initEventByID(int idOfEvent)
 	{		
 		eventData.gameEvents.Add(XMLParser.GetEventByID(idOfEvent));
 	}
 	
-	void initEventByTag(string eventTag)
+	public void initEventByTag(string eventTag)
 	{
 		eventData.gameEvents.Add(XMLParser.GetEventByTag(eventTag));
 	}
