@@ -12,7 +12,11 @@ public class EventUIControls : MonoBehaviour
 	// Start is called before the first frame update
     void Start()
     {
-        
+		List<string> dinosaurs = new List<string>();
+		dinosaurs.Add("kek");
+		dinosaurs.Add("kel");
+		dinosaurs.Add("kem");
+		initUI(1, 2, "дороу", "описанье", dinosaurs);
     }
 
     // Update is called once per frame
@@ -25,7 +29,23 @@ public class EventUIControls : MonoBehaviour
 	{
 		roomID = rm;
 		eventID = ev;
-		
+		transform.Find("Title/TitleText").gameObject.GetComponent<UnityEngine.UI.Text>().text = title;
+		transform.Find("SelectionScreen/Problem/ProblemText").gameObject.GetComponent<UnityEngine.UI.Text>().text = description;
+		int cnt = 0;
+		foreach (string option in options)
+			{
+				string searchRoot = "SelectionScreen/Solution"+cnt+"/SolutionText";
+				Debug.Log(searchRoot);
+				transform.Find(searchRoot).gameObject.GetComponent<UnityEngine.UI.Text>().text = option;
+				cnt++;
+			}
+		if (cnt<5)
+			for (int i = cnt; i < 5; i++)
+				{
+					string searchRoot = "SelectionScreen/Solution"+i;
+					Destroy(transform.Find(searchRoot).gameObject);
+				}
+			
 	}
 	
 	public void OnClickAlarm()
@@ -42,7 +62,7 @@ public class EventUIControls : MonoBehaviour
 	{
 		state = "Result";
 		StateChange();
-		Debug.Log(eventID + " choice " + optionNum);
+		Debug.Log("event " + eventID + " resolved in room " + roomID + " by choosing " + optionNum);
 	}
 	
 	
