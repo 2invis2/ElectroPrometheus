@@ -4,27 +4,29 @@ using UnityEngine;
 
 public class EventManager : MonoBehaviour
 {
-    public Event eventData;
+    public EventDatabase eventData;
+	public Event ShittyEvent;
 	
 	void Start()
 	{
-		Debug.Log(eventData.title);
+		initEventByTag("Ulala");
+		Debug.Log(XMLParser.GetShittyEvent());
 	}
 	
 	void Update()
 	{
 		initEventByTag("Ulala");
-		Debug.Log(eventData.title);
+		Debug.Log(eventData);
 	}
 	
 	
 	void initEventByID(int idOfEvent)
 	{		
-		eventData = XMLParser.ins.eventDB.gameEvents.Find(ev => ev.id == idOfEvent);
+		eventData.gameEvents.Add(XMLParser.GetEventByID(idOfEvent));
 	}
 	
 	void initEventByTag(string eventTag)
 	{
-		eventData = XMLParser.ins.eventDB.gameEvents.Find(ev => ev.types.Contains(eventTag));
+		eventData.gameEvents.Add(XMLParser.GetEventByTag(eventTag));
 	}
 }

@@ -9,11 +9,11 @@ using System.IO;
 
 public class XMLParser : MonoBehaviour
 {
-    public static XMLParser ins;
+    public static XMLParser instanceParser;
 	
 	void Awake()
 	{
-		ins = this;
+		instanceParser = this;
 		LoadEvents();
 	}
 	
@@ -33,6 +33,21 @@ public class XMLParser : MonoBehaviour
 		FileStream stream = new FileStream(Application.dataPath + "/DataXML/eventlist.xml", FileMode.Open);
 		eventDB = serializer.Deserialize(stream) as EventDatabase;
 		stream.Close();
+	}
+	
+	public static Event GetShittyEvent()
+	{
+		return instanceParser.eventDB.gameEvents.Find(ev => ev.id == 0);
+	}
+	
+	public static Event GetEventByID(int neededId)
+	{
+		return instanceParser.eventDB.gameEvents.Find(ev => ev.id == neededId);
+	}
+	
+	public static Event GetEventByTag(string neededTag)
+	{
+		return instanceParser.eventDB.gameEvents.Find(ev => ev.types.Contains(neededTag));
 	}
     
 }
