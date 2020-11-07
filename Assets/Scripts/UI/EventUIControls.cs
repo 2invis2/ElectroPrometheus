@@ -70,12 +70,14 @@ public class EventUIControls : MonoBehaviour
 		state = "Result";
 		transform.Find("Solved/SolvedText").gameObject.GetComponent<UnityEngine.UI.Text>().text = results[optionNum];
 		StateChange();
+		this.gameObject.transform.parent.GetComponent<Room>().ChangeResource(optionNum);
 		Debug.Log("event " + eventID + " resolved by choosing " + optionNum);
 	}
 	
 	public void OnClickExit()
 	{
 		GameObject.FindWithTag("MainCamera").GetComponent<CameraControl>().UnclipCamera();
+		this.gameObject.transform.parent.GetComponent<Room>().onEventSolved();
 		Destroy(this.gameObject);
 	}
 	

@@ -56,10 +56,32 @@ public class Room : MonoBehaviour
         return descriptionRoom;
     }
 
-    public void GiveEventStatus()
-    {
-
-    }
+	
+	public bool hasActiveEvent()
+	{
+		bool ans = false;
+		if (transform.Find("EventUI").gameObject != null)
+			ans = true;
+		else
+			ans = false;
+		return ans;
+	}
+	
+	public void onEventSolved()
+	{
+		//тут ссылка на глобальное обновление
+	}
+	
+	public void UpdateEvent()
+	{
+		roomEvent.turns--;
+		if (roomEvent.turns == 0)
+			if (roomEvent.id == roomEvent.idNextStage)
+				ChangeResource(0);
+			else
+				eventManager.initEventByID(roomEvent.idNextStage);
+		Debug.Log("eventupdated");
+	}
 
     public void ChangeResource(int indexOption)
     {
@@ -69,5 +91,5 @@ public class Room : MonoBehaviour
         {
             resourceManager.ChangeValueResource(changesResource.resource, changesResource.value);
         }
-    }
+	}
 }

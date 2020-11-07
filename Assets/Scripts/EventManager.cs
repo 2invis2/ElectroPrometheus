@@ -21,12 +21,19 @@ public class EventManager : MonoBehaviour
 		{
 			initEventByTag("Ulala");
 		}
+		if (cnt == 100)
+		{
+			sampleRoom.GetComponent<Room>().UpdateEvent();
+		}
+		Debug.Log(cnt);
 	}
 	
 	
 	public void initEventByID(int idOfEvent)
 	{		
-		eventData.gameEvents.Add(XMLParser.GetEventByID(idOfEvent));
+		Event thisEvent = XMLParser.GetEventByID(idOfEvent);
+		eventData.gameEvents.Add(thisEvent);
+		sampleRoom.GetComponent<Room>().InitEvent(thisEvent);
 	}
 	
 	public void initEventByTag(string eventTag)
