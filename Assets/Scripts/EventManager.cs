@@ -9,21 +9,6 @@ public class EventManager : MonoBehaviour
 	public GameObject sampleRoom;
 	private int cnt;
 	
-	void Start()
-	{
-		cnt = 0;
-	}
-	
-	void Update()
-	{
-		cnt++;
-		if (cnt == 5)
-		{
-			initEventByTag("Ulala");
-		}
-	}
-	
-	
 	public void initEventByID(int idOfEvent)
 	{		
 		Event thisEvent = XMLParser.GetEventByID(idOfEvent);

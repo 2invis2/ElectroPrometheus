@@ -7,10 +7,12 @@ public class Room : MonoBehaviour
 	public GameObject resourceManagerOBJ;
     public GameObject eventManagerOBJ;
     public GameObject eventUIControlsOBJ;
+	public GameObject directorOBJ;
 	public Transform prefabOfEventUI;
 	private ResourceManager resourceManager;
     private EventManager eventManager;
-    private EventUIControls eventUIControls;
+	private Director director;
+	private EventUIControls eventUIControls;
 	private bool inEvent;
     public Event roomEvent;
     public int eventStatus;
@@ -20,6 +22,7 @@ public class Room : MonoBehaviour
     {
         resourceManager = resourceManagerOBJ.GetComponent<ResourceManager>();
         eventManager = eventManagerOBJ.GetComponent<EventManager>();
+		director = directorOBJ.GetComponent<Director>();
 		inEvent = false;
     }
 	
@@ -68,7 +71,7 @@ public class Room : MonoBehaviour
 	public void onEventSolved()
 	{
 		inEvent = false;
-		//тут ссылка на глобальное обновление
+		director.UpdateTurn();
 	}
 	
 	public void UpdateEvent()

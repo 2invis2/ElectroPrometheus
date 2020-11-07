@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <EventDatabase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <gameEvents>
-	<Event>
+	<!--<Event>
       <id>0</id>
       <idNextStage>0</idNextStage>
 	  <roomIDs>
@@ -74,7 +74,7 @@
         <string>Команда корабля славно постаралась, но на некоторых из них проступила проседь.
 </string>
       </effectsText>
-    </Event>
+    </Event>-->
 	<Event>
       <id>1</id>
       <idNextStage>2</idNextStage>
