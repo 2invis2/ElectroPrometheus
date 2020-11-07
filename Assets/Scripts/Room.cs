@@ -11,6 +11,7 @@ public class Room : MonoBehaviour
 	private ResourceManager resourceManager;
     private EventManager eventManager;
     private EventUIControls eventUIControls;
+	private bool inEvent;
     public Event roomEvent;
     public int eventStatus;
     public string descriptionRoom;
@@ -19,6 +20,7 @@ public class Room : MonoBehaviour
     {
         resourceManager = resourceManagerOBJ.GetComponent<ResourceManager>();
         eventManager = eventManagerOBJ.GetComponent<EventManager>();
+		inEvent = false;
     }
 	
 	private void InitEventUI()
@@ -33,6 +35,7 @@ public class Room : MonoBehaviour
         roomEvent = selectedEvent;
         eventStatus = roomEvent.turns;
 		InitEventUI();
+		inEvent = true;
 		
     }
 
@@ -59,16 +62,12 @@ public class Room : MonoBehaviour
 	
 	public bool hasActiveEvent()
 	{
-		bool ans = false;
-		if (transform.Find("EventUI").gameObject != null)
-			ans = true;
-		else
-			ans = false;
-		return ans;
+		return inEvent;
 	}
 	
 	public void onEventSolved()
 	{
+		inEvent = false;
 		//тут ссылка на глобальное обновление
 	}
 	
@@ -77,7 +76,10 @@ public class Room : MonoBehaviour
 		roomEvent.turns--;
 		if (roomEvent.turns == 0)
 			if (roomEvent.id == roomEvent.idNextStage)
+			{
 				ChangeResource(0);
+				Destroy(eventUIControlsOBJ);
+			}
 			else
 				eventManager.initEventByID(roomEvent.idNextStage);
 		Debug.Log("eventupdated");

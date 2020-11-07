@@ -21,11 +21,6 @@ public class EventManager : MonoBehaviour
 		{
 			initEventByTag("Ulala");
 		}
-		if (cnt == 100)
-		{
-			sampleRoom.GetComponent<Room>().UpdateEvent();
-		}
-		Debug.Log(cnt);
 	}
 	
 	
