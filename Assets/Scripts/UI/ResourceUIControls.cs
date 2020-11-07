@@ -5,16 +5,38 @@ using UnityEngine.UI;
 
 public class ResourceUIControls : MonoBehaviour
 {
-	public Text energyText;
-    public Text oxygenText;
-    public Text peopleText;
-    public Text happinessText;
-    public Text repairText;
-    public Text timerText;
-    public ResourceManager resourceManager;
+    public Resource resource;
+    public GameObject mask;
+    public GameObject resourceManagerOBJ;
+    private List<Animator> animators = new List<Animator>();
+    private ResourceManager resourceManager;
 
-    private void Start()
+    private int resourceValue;
+    private int maxResourceValue;
+    private float maxScaleMask;
+
+    private List<GameObject> listOfChildren;
+
+    private void Awake()
     {
+        resourceManager = resourceManagerOBJ.GetComponent<ResourceManager>();
+        GetComponentsInChildren<Animator>(animators);
+        Debug.Log("animators.Count " + animators.Count);
+
+        /*foreach (Animator child in obj.transform)
+        {
+            if (null == child)
+                continue;
+           
+            listOfChildren.Add(child.gameObject);
+        }*/
+
+        maxScaleMask = mask.transform.localScale.x;
+    }
+
+    public void Start()
+    {
+        maxResourceValue = resourceManager.GetMaxValueResource(resource);
         ShowResourceValue();
     }
 
@@ -25,10 +47,38 @@ public class ResourceUIControls : MonoBehaviour
 
 	private void ShowResourceValue()
     {
-        energyText.text = resourceManager.GetValueResource(Resource.ENERGY).ToString();
-        oxygenText.text = resourceManager.GetValueResource(Resource.OXYGEN).ToString();
-        happinessText.text = resourceManager.GetValueResource(Resource.HAPPINESS).ToString();
-        repairText.text = resourceManager.GetValueResource(Resource.REPAIR_REACTOR_TIME).ToString();
-        timerText.text = resourceManager.GetValueResource(Resource.TIME_BEFORE_LANDING).ToString();
+        resourceValue = resourceManager.GetValueResource(resource);
+
+        Debug.Log(resource.ToString() + " " + resourceValue);
+
+        float changeScaleX = (float)resourceValue / (float)maxResourceValue;
+
+        mask.transform.localScale = new Vector3(maxScaleMask * changeScaleX,
+            mask.transform.localScale.y, mask.transform.localScale.z);
+
+        float percentValue = changeScaleX * 100;
+
+        Debug.Log("animators.Count " + animators.Count);
+
+        foreach (Animator childAnimator in animators)
+        {
+            
+            if (percentValue > 70)
+            {
+                childAnimator.SetInteger("state", 0);
+            }
+            else
+            {
+                if (percentValue < 30)
+                {
+                    childAnimator.SetInteger("state", 2);
+                }
+                else
+                {
+                    childAnimator.SetInteger("state", 1);
+                }
+
+            }
+        }
     }
 }
