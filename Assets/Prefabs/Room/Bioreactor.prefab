@@ -1,5 +1,24 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!95 &932656823125060706
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825187242564517149}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bd2bcc0d896678d419cf4c6bec9596ed, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &8074380131180120541
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66,7 +85,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 6cb9762fc8dd6564cbfa614da55648e6,
+      objectReference: {fileID: 8455229374896958284, guid: 30e5ec1c2deb7da4b9ff21a171ae367d,
         type: 3}
     - target: {fileID: 4041213160235846467, guid: ba4bbf7bd2ea0d54982c65fc163df10d,
         type: 3}
@@ -78,6 +97,16 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 4041213160235846467, guid: ba4bbf7bd2ea0d54982c65fc163df10d,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 19.199999
+      objectReference: {fileID: 0}
+    - target: {fileID: 4041213160235846467, guid: ba4bbf7bd2ea0d54982c65fc163df10d,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 10.802637
+      objectReference: {fileID: 0}
     - target: {fileID: 9203643462748983151, guid: ba4bbf7bd2ea0d54982c65fc163df10d,
         type: 3}
       propertyPath: m_Name
@@ -85,3 +114,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba4bbf7bd2ea0d54982c65fc163df10d, type: 3}
+--- !u!1 &825187242564517149 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8898640760313443520, guid: ba4bbf7bd2ea0d54982c65fc163df10d,
+    type: 3}
+  m_PrefabInstance: {fileID: 8074380131180120541}
+  m_PrefabAsset: {fileID: 0}
