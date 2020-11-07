@@ -6,6 +6,7 @@ public class EventManager : MonoBehaviour
 {
     public EventDatabase eventData;
 	public Event ShittyEvent;
+	public GameObject sampleRoom;
 	private int cnt;
 	
 	void Start()
@@ -30,6 +31,8 @@ public class EventManager : MonoBehaviour
 	
 	public void initEventByTag(string eventTag)
 	{
-		eventData.gameEvents.Add(XMLParser.GetEventByTag(eventTag));
+		Event thisEvent = XMLParser.GetEventByTag(eventTag);
+		eventData.gameEvents.Add(thisEvent);
+		sampleRoom.GetComponent<Room>().InitEvent(thisEvent);
 	}
 }

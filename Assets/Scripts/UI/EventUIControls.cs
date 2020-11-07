@@ -23,7 +23,7 @@ public class EventUIControls : MonoBehaviour
 		cnt++;
 		if (cnt == 10)
 		{
-			initUI(XMLParser.GetShittyEvent());
+			//initUI(XMLParser.GetShittyEvent());
 		}
     }
 	

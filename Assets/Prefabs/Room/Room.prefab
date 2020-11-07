@@ -128,6 +128,8 @@ MonoBehaviour:
   resourceManagerOBJ: {fileID: 0}
   eventManagerOBJ: {fileID: 0}
   eventUIControlsOBJ: {fileID: 0}
+  prefabOfEventUI: {fileID: 8946648120777142761, guid: e5c7f402b69874741844a72b1d2a6758,
+    type: 3}
   roomEvent:
     id: 0
     idNextStage: 0
