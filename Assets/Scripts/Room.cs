@@ -29,6 +29,7 @@ public class Room : MonoBehaviour
 	private void InitEventUI()
 	{
 		eventUIControlsOBJ = Instantiate(prefabOfEventUI, this.transform).gameObject;
+		eventUIControlsOBJ.GetComponent<Canvas>().sortingOrder = 1;
 		eventUIControls = eventUIControlsOBJ.GetComponent<EventUIControls>();
 		eventUIControls.initUI(roomEvent);
 	}

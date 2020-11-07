@@ -900,7 +900,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!114 &2134675565260896518
 MonoBehaviour:
@@ -992,7 +992,6 @@ MonoBehaviour:
   happinessText: {fileID: 2134675564296377910}
   repairText: {fileID: 2134675564543055268}
   timerText: {fileID: 2134675564694648961}
-  resourceUi: {fileID: 0}
   resourceManager: {fileID: 0}
 --- !u!1 &2134675565464277928
 GameObject:
