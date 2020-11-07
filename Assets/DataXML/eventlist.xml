@@ -22,22 +22,23 @@
       <resultList>
         <Result>
           <changesOfResources>
-            <ResourceChange>
+            <ResourceItem>
               <resource>ENERGY</resource>
-              <deltaValue>-1</deltaValue>
-            </ResourceChange>
-            <ResourceChange>
+			  <value>-1</value>
+            </ResourceItem>
+			<ResourceItem>
               <resource>OXYGEN</resource>
-              <deltaValue>-1</deltaValue>
-            </ResourceChange>
-          </changesOfResources>
+              <value>-1</value>
+            </ResourceItem>
+          
+	  </changesOfResources>
         </Result>
         <Result>
           <changesOfResources>
-            <ResourceChange>
+			  <ResourceItem>
               <resource>ENERGY</resource>
-              <deltaValue>-2</deltaValue>
-            </ResourceChange>
+              <value>-2</value>
+            </ResourceItem>
           </changesOfResources>
         </Result>
       </resultList>

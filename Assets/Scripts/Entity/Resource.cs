@@ -2,9 +2,8 @@
 {
     ENERGY,
     OXYGEN,
-    FOOD,
     PEOPLE,
-    MORALE,
-    REACTOR,
-    WATER
+    HAPPINESS,
+    REPAIR_REACTOR_TIME,
+    TIME_BEFORE_LANDING
 }
