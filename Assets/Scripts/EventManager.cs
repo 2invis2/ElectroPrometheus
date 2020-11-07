@@ -6,17 +6,20 @@ public class EventManager : MonoBehaviour
 {
     public EventDatabase eventData;
 	public Event ShittyEvent;
+	private int cnt;
 	
 	void Start()
 	{
-		initEventByTag("Ulala");
-		Debug.Log(XMLParser.GetShittyEvent());
+		cnt = 0;
 	}
 	
 	void Update()
 	{
-		initEventByTag("Ulala");
-		//Debug.Log(eventData);
+		cnt++;
+		if (cnt == 5)
+		{
+			initEventByTag("Ulala");
+		}
 	}
 	
 	

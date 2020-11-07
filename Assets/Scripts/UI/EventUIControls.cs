@@ -7,28 +7,33 @@ public class EventUIControls : MonoBehaviour
     public int roomID;
 	public int eventID;
 	private string state = "OnlyAlarm";
+	private string[] results;
+	private int cnt;
 
 	
 	// Start is called before the first frame update
     void Start()
     {
-		List<string> dinosaurs = new List<string>();
-		dinosaurs.Add("kek");
-		dinosaurs.Add("kel");
-		dinosaurs.Add("kem");
-		initUI(1, 2, "дороу", "описанье", dinosaurs);
+		cnt = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+		cnt++;
+		if (cnt == 10)
+		{
+			initUI(XMLParser.GetShittyEvent());
+		}
     }
 	
-	void initUI(int rm, int ev, string title, string description, List<string> options)
+	public void initUI(Event localEvent)
 	{
-		roomID = rm;
-		eventID = ev;
+		eventID = localEvent.id;
+		string title = localEvent.title;
+		string description = localEvent.description; 
+		List<string> options = new List<string>(localEvent.optionText);
+		localEvent.effectsText.CopyTo(results);	
 		transform.Find("Title/TitleText").gameObject.GetComponent<UnityEngine.UI.Text>().text = title;
 		transform.Find("SelectionScreen/Problem/ProblemText").gameObject.GetComponent<UnityEngine.UI.Text>().text = description;
 		int cnt = 0;
@@ -61,8 +66,9 @@ public class EventUIControls : MonoBehaviour
 	public void OnClickOption(int optionNum)
 	{
 		state = "Result";
+		transform.Find("Solved/SolvedText").gameObject.GetComponent<UnityEngine.UI.Text>().text = results[optionNum];
 		StateChange();
-		Debug.Log("event " + eventID + " resolved in room " + roomID + " by choosing " + optionNum);
+		Debug.Log("event " + eventID + " resolved by choosing " + optionNum);
 	}
 	
 	
