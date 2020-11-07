@@ -7,7 +7,7 @@ public class EventUIControls : MonoBehaviour
     public int roomID;
 	public int eventID;
 	private string state = "OnlyAlarm";
-	private string[] results;
+	private List<string> results;
 	private int cnt;
 
 	
@@ -33,7 +33,7 @@ public class EventUIControls : MonoBehaviour
 		string title = localEvent.title;
 		string description = localEvent.description; 
 		List<string> options = new List<string>(localEvent.optionText);
-		localEvent.effectsText.CopyTo(results);	
+		results = new List<string> (localEvent.effectsText);	
 		transform.Find("Title/TitleText").gameObject.GetComponent<UnityEngine.UI.Text>().text = title;
 		transform.Find("SelectionScreen/Problem/ProblemText").gameObject.GetComponent<UnityEngine.UI.Text>().text = description;
 		int cnt = 0;
