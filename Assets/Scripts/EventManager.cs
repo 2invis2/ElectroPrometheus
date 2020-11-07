@@ -5,21 +5,18 @@ using UnityEngine;
 public class EventManager : MonoBehaviour
 {
     public EventDatabase eventData;
-	public Event ShittyEvent;
-	public GameObject sampleRoom;
-	private int cnt;
 	
-	public void initEventByID(int idOfEvent)
+	public void initEventByID(int idOfEvent, GameObject roomTo)
 	{		
 		Event thisEvent = XMLParser.GetEventByID(idOfEvent);
 		eventData.gameEvents.Add(thisEvent);
-		sampleRoom.GetComponent<Room>().InitEvent(thisEvent);
+		roomTo.GetComponent<Room>().InitEvent(thisEvent);
 	}
 	
-	public void initEventByTag(string eventTag)
+	public void initEventByTag(string eventTag, GameObject roomTo)
 	{
 		Event thisEvent = XMLParser.GetEventByTag(eventTag);
 		eventData.gameEvents.Add(thisEvent);
-		sampleRoom.GetComponent<Room>().InitEvent(thisEvent);
+		roomTo.GetComponent<Room>().InitEvent(thisEvent);
 	}
 }

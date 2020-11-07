@@ -15,22 +15,36 @@ public class Director : MonoBehaviour
         resourceManager = resourceManagerOBJ.GetComponent<ResourceManager>();
         eventManager = eventManagerOBJ.GetComponent<EventManager>();
 
-        CreateEventByType(TypeEvent.GREEN);
+        CreateEventByType(TypeEvent.GREEN, rooms[1]);
     }
 
     public void UpdateTurn()
     {
         foreach(GameObject room in rooms)
         {
-            room.GetComponent<Room>().UpdateEvent();
+            room.GetComponent<Room>().UpdateEvent();			
         }
+		int randomAAAA = Random.Range(0, (freeRooms().Count-1));
+		int randomFreeRoomI = freeRooms()[randomAAAA];
+		CreateEventByType(TypeEvent.GREEN, rooms[randomFreeRoomI]);
+		
 
-        CreateEventByType(TypeEvent.GREEN);
-        CreateEventByType(TypeEvent.GREEN);
     }
 
-    private void CreateEventByType(TypeEvent type)
+    private void CreateEventByType(TypeEvent type, GameObject roomTo)
     {
-        eventManager.initEventByTag("GREEN");
+        eventManager.initEventByTag("GREEN", roomTo);
     }
+	
+	private List<int> freeRooms()
+	{
+		List<int> ans = new List<int>();
+		for	(int i=0; i<12; i++)
+		{
+			if (!rooms[i].GetComponent<Room>().hasActiveEvent())
+				ans.Add(i);
+		}
+		Debug.Log(ans.Count);
+		return ans;
+	}
 }

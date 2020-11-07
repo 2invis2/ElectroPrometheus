@@ -29,7 +29,7 @@ public class Room : MonoBehaviour
 	private void InitEventUI()
 	{
 		eventUIControlsOBJ = Instantiate(prefabOfEventUI, this.transform).gameObject;
-		eventUIControls = eventUIControlsOBJ.GetComponentInChildren<EventUIControls>();
+		eventUIControls = eventUIControlsOBJ.GetComponent<EventUIControls>();
 		eventUIControls.initUI(roomEvent);
 	}
 
@@ -76,16 +76,20 @@ public class Room : MonoBehaviour
 	
 	public void UpdateEvent()
 	{
-		roomEvent.turns--;
-		if (roomEvent.turns == 0)
-			if (roomEvent.id == roomEvent.idNextStage)
-			{
-				ChangeResource(0);
-				Destroy(eventUIControlsOBJ);
-			}
-			else
-				eventManager.initEventByID(roomEvent.idNextStage);
-		Debug.Log("eventupdated");
+		if (inEvent)
+		{
+			roomEvent.turns--;
+			if (roomEvent.turns == 0)
+				if (roomEvent.id == roomEvent.idNextStage)
+				{
+					ChangeResource(0);
+					Destroy(eventUIControlsOBJ);
+					inEvent = false;
+				}
+				else
+					eventManager.initEventByID(roomEvent.idNextStage, this.gameObject);
+			Debug.Log("eventupdated" + this.gameObject.name);
+		}
 	}
 
     public void ChangeResource(int indexOption)
