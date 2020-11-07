@@ -7,6 +7,7 @@ public class Room : MonoBehaviour
 	public GameObject resourceManagerOBJ;
     public GameObject eventManagerOBJ;
     public GameObject eventUIControlsOBJ;
+	public Transform prefabOfEventUI;
 	private ResourceManager resourceManager;
     private EventManager eventManager;
     private EventUIControls eventUIControls;
@@ -18,13 +19,19 @@ public class Room : MonoBehaviour
     {
         resourceManager = resourceManagerOBJ.GetComponent<ResourceManager>();
         eventManager = eventManagerOBJ.GetComponent<EventManager>();
-        eventUIControls = eventUIControlsOBJ.GetComponentInChildren<EventUIControls>();
     }
+	
+	private void InitEventUI()
+	{
+		eventUIControlsOBJ = Instantiate(prefabOfEventUI, this.transform).gameObject;
+		eventUIControls = eventUIControlsOBJ.GetComponentInChildren<EventUIControls>();
+	}
 
     public void InitEvent(Event selectedEvent)
     {
         roomEvent = selectedEvent;
         eventStatus = roomEvent.turns;
+		
     }
 
     public string ShowMessageDescription()
