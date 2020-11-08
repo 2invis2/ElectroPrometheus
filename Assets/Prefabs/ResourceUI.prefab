@@ -986,13 +986,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f63c310fad1f6c2489b58f553a375210, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energyText: {fileID: 2134675565688270744}
-  oxygenText: {fileID: 2134675564336154672}
-  peopleText: {fileID: 0}
-  happinessText: {fileID: 2134675564296377910}
-  repairText: {fileID: 2134675564543055268}
-  timerText: {fileID: 2134675564694648961}
-  resourceManager: {fileID: 0}
+  resource: 0
+  mask: {fileID: 0}
+  resourceManagerOBJ: {fileID: 0}
 --- !u!1 &2134675565464277928
 GameObject:
   m_ObjectHideFlags: 0
