@@ -10,7 +10,7 @@ Animator:
   m_GameObject: {fileID: 8100097454016499340}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6a1eb65fc72f4ca4fb4af4349796268b, type: 2}
+  m_Controller: {fileID: 9100000, guid: be0a57ad963cdf14da76cf523c877c81, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -29,7 +29,7 @@ Animator:
   m_GameObject: {fileID: 3992207610813642624}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: be0a57ad963cdf14da76cf523c877c81, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6a1eb65fc72f4ca4fb4af4349796268b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -45,6 +45,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1426227907160709882, guid: a95270ce47666e045af8c0177be997d2,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 371525519795206525, guid: 868dff5f76e3a5949aa00b966036f946,
+        type: 3}
     - target: {fileID: 3461866122957194410, guid: a95270ce47666e045af8c0177be997d2,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -110,6 +116,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8811901924633255290, guid: a95270ce47666e045af8c0177be997d2,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 6033874447734129086, guid: 868dff5f76e3a5949aa00b966036f946,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a95270ce47666e045af8c0177be997d2, type: 3}
 --- !u!1 &8100097454016499340 stripped
