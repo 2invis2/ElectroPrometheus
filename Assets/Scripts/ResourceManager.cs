@@ -26,7 +26,7 @@ public class ResourceManager : MonoBehaviour
     {
         //TODO здесь должен быть вызов парсера и загрузка из XML
 
-        //int valueResource = 100;
+        int valueResource = 100;
 
         maxResources = new List<ResourceItem>();
         resources = new List<ResourceItem>();
@@ -44,11 +44,11 @@ public class ResourceManager : MonoBehaviour
         resources.Add(new ResourceItem(TIME_BEFORE_LANDING, startTimeValue));
         maxResources.Add(new ResourceItem(TIME_BEFORE_LANDING, maxResourceValue[3]));
 
-        /*resources.Add(new ResourceItem(PEOPLE, valueResource));
+        resources.Add(new ResourceItem(PEOPLE, valueResource));
         resources.Add(new ResourceItem(REPAIR_REACTOR_TIME, valueResource));
 
         maxResources.Add(new ResourceItem(PEOPLE, valueResource));
-        maxResources.Add(new ResourceItem(REPAIR_REACTOR_TIME, valueResource));*/
+        maxResources.Add(new ResourceItem(REPAIR_REACTOR_TIME, valueResource));
 
     }
 

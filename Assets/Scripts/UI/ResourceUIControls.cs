@@ -21,15 +21,6 @@ public class ResourceUIControls : MonoBehaviour
     {
         resourceManager = resourceManagerOBJ.GetComponent<ResourceManager>();
         GetComponentsInChildren<Animator>(animators);
-        Debug.Log("animators.Count " + animators.Count);
-
-        /*foreach (Animator child in obj.transform)
-        {
-            if (null == child)
-                continue;
-           
-            listOfChildren.Add(child.gameObject);
-        }*/
 
         maxScaleMask = mask.transform.localScale.x;
     }
@@ -49,8 +40,6 @@ public class ResourceUIControls : MonoBehaviour
     {
         resourceValue = resourceManager.GetValueResource(resource);
 
-        Debug.Log(resource.ToString() + " " + resourceValue);
-
         float changeScaleX = (float)resourceValue / (float)maxResourceValue;
 
         mask.transform.localScale = new Vector3(maxScaleMask * changeScaleX,
@@ -58,11 +47,8 @@ public class ResourceUIControls : MonoBehaviour
 
         float percentValue = changeScaleX * 100;
 
-        Debug.Log("animators.Count " + animators.Count);
-
         foreach (Animator childAnimator in animators)
         {
-            
             if (percentValue > 70)
             {
                 childAnimator.SetInteger("state", 0);

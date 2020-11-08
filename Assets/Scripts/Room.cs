@@ -8,6 +8,7 @@ public class Room : MonoBehaviour
     public GameObject eventManagerOBJ;
     public GameObject eventUIControlsOBJ;
 	public GameObject directorOBJ;
+	public GameObject timeScaleOBJ;
 	public Transform prefabOfEventUI;
 	private ResourceManager resourceManager;
     private EventManager eventManager;
@@ -108,6 +109,13 @@ public class Room : MonoBehaviour
         foreach(ResourceItem changesResource in changesOfResources)
         {
             resourceManager.ChangeValueResource(changesResource.resource, changesResource.value);
+
+			if(changesResource.resource == Resource.TIME_BEFORE_LANDING)
+            {
+				int time = resourceManager.GetValueResource(Resource.TIME_BEFORE_LANDING);
+
+				timeScaleOBJ.GetComponent<TimeScaleLine>().Move(time);
+            }
         }
 	}
 	
