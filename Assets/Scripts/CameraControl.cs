@@ -6,7 +6,7 @@ public class CameraControl : MonoBehaviour
 
 	public int speed = 10;
 	private int currentSpeed;
-	private int edgeScreen = 50;
+	public int edgeScreen = 50;
     public List<int> borderCord = new List<int>(); //лево,право,вверх,низ
 
     void Start()

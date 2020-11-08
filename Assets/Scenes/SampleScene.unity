@@ -1160,7 +1160,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f42a1f63d6a8354483ac2baf7716939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 10
+  edgeScreen: 70
   borderCord: efffffff180000000f000000f0ffffff
 --- !u!4 &1208617632
 Transform:
