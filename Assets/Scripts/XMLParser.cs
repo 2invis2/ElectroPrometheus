@@ -56,7 +56,7 @@ public class XMLParser : MonoBehaviour
 		 //foreach (Event ev in suitable)
 		//	Debug.Log(ev.description);
 		Event ans = suitable[Random.Range(0, suitable.Count)];
-		Debug.Log(ans.description);
+		//Debug.Log(ans.description);
 		return ans;
 	}
 }

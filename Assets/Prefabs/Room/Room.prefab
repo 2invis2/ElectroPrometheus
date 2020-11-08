@@ -125,12 +125,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d4bd683765093847b72f505f87fe29f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  punishesDesc:
+  - "\u0411\u0443\u043D\u0442"
+  - "\u0421\u0431\u0438\u043B\u0441\u044F \u0441 \u043A\u0443\u0440\u0441\u0430"
+  punishesEff:
+  - changesOfResources:
+    - resource: 0
+      value: -1
+    - resource: 1
+      value: -1
+    - resource: 0
+      value: -1
+  - changesOfResources:
+    - resource: 0
+      value: -3
   resourceManagerOBJ: {fileID: 0}
   eventManagerOBJ: {fileID: 0}
   eventUIControlsOBJ: {fileID: 0}
   directorOBJ: {fileID: 0}
+  timeScaleOBJ: {fileID: 0}
   prefabOfEventUI: {fileID: 8946648120777142761, guid: e5c7f402b69874741844a72b1d2a6758,
     type: 3}
+  inEvent: 0
   roomEvent:
     id: 0
     idNextStage: 0

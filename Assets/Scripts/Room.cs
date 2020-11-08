@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Room : MonoBehaviour
 {
+	public List<string> punishesDesc;
+	public List<Result> punishesEff;
+	
 	public GameObject resourceManagerOBJ;
     public GameObject eventManagerOBJ;
     public GameObject eventUIControlsOBJ;
@@ -87,7 +90,7 @@ public class Room : MonoBehaviour
 			{
 				if (roomEvent.types[0]=="RED")
 				{
-					Punish();
+					Punish(punishesEff, punishesDesc);
 					Destroy(eventUIControlsOBJ);
 					inEvent = false;
 				}
@@ -119,8 +122,14 @@ public class Room : MonoBehaviour
         }
 	}
 	
-	public void Punish()
+	public void Punish(List<Result> res, List<string> descs)
 	{
-		Debug.Log("bad boy");
+		int ln = descs.Count;
+		int indx = Random.Range(0, ln);
+		Result rndChange = res[indx];
+		foreach (ResourceItem kek in rndChange.changesOfResources)
+			resourceManager.ChangeValueResource(kek.resource, kek.value);
+		Debug.Log("PUNIIIIIIIIIIIIIIIIIIIIIIISH "+ descs[indx]);
 	}
+		
 }
