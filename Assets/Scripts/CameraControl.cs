@@ -45,7 +45,7 @@ public class CameraControl : MonoBehaviour
 	public void UnclipCamera()
 	{
 		currentSpeed = speed;
-		Debug.Log("UNCCCCCLIPPPPEDDD");
+		//Debug.Log("UNCCCCCLIPPPPEDDD");
 		transform.Find("Main Camera").gameObject.GetComponent<Camera>().orthographicSize = 10f;	
 	}	
 }

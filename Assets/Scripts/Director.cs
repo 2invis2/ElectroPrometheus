@@ -30,7 +30,7 @@ public class Director : MonoBehaviour
         }
 		
 		List<int> freeRooms = FreeRooms();
-		Debug.Log(freeRooms.Count);
+		//Debug.Log(freeRooms.Count);
 		if (freeRooms.Count>(13-eventLimit))
 		{
 			int random1 = Random.Range(0, (freeRooms.Count-1));
@@ -41,7 +41,7 @@ public class Director : MonoBehaviour
 			}
 			int randomFreeRoom1 = freeRooms[random1];
 			int randomFreeRoom2 = freeRooms[random2];
-			Debug.Log(" спаун в комнатах - " + randomFreeRoom1 + " " + randomFreeRoom2);
+			//Debug.Log(" спаун в комнатах - " + randomFreeRoom1 + " " + randomFreeRoom2);
 			CreateEventByTypeRandom(TypeEvent.GREEN, rooms[randomFreeRoom1]);
 			CreateEventByTypeRandom(TypeEvent.GREEN, rooms[randomFreeRoom2]);
 		}
@@ -50,7 +50,7 @@ public class Director : MonoBehaviour
 			{
 				int random1 = Random.Range(0, (freeRooms.Count-1));
 				int randomFreeRoom1 = freeRooms[random1];
-				Debug.Log(" спаун в комнате - " + randomFreeRoom1);
+				//Debug.Log(" спаун в комнате - " + randomFreeRoom1);
 				CreateEventByTypeRandom(TypeEvent.GREEN, rooms[randomFreeRoom1]);
 			}
 
@@ -77,7 +77,7 @@ public class Director : MonoBehaviour
 	{
 		int time = resourceManager.GetValueResource(Resource.TIME_BEFORE_LANDING);
 		int maxTime = resourceManager.GetMaxValueResource(Resource.TIME_BEFORE_LANDING);
-		Debug.Log("Time " + time);
+		//Debug.Log("Time " + time);
 
 		return (time <= -maxTime);
 	}
@@ -141,7 +141,7 @@ public class Director : MonoBehaviour
 			if (!rooms[i].GetComponent<Room>().hasActiveEvent())
 				ans.Add(i);
 		}
-		Debug.Log(ans.Count);
+		//Debug.Log(ans.Count);
 		return ans;
 	}
 }
