@@ -10,6 +10,19 @@ public class EventUIControls : MonoBehaviour
 	public Sprite greenSprite;
 	public Sprite purpleSprite;
 	public Sprite yellowSprite;
+	
+	public Sprite yellowO;
+	public Sprite yellowH;
+	public Sprite yellowE;
+	
+	public Sprite redO;
+	public Sprite redH;
+	public Sprite redE;
+	
+	public Sprite greenO;
+	public Sprite greenH;
+	public Sprite greenE;
+	
 	private string state = "OnlyAlarm";
 	private List<string> results;
 	private int cnt;
@@ -62,7 +75,55 @@ public class EventUIControls : MonoBehaviour
 		foreach (string option in options)
 			{
 				string searchRoot = "SelectionScreen/Solution"+cnt+"/SolutionText";
+				string searchRootIcons = "SelectionScreen/Solution"+cnt+"/ResultIcons";
 				transform.Find(searchRoot).gameObject.GetComponent<UnityEngine.UI.Text>().text = option;
+				int lmt = localEvent.resultList.Count;
+				for (int i = 0; i<lmt; i++)
+				{
+					if (localEvent.resultList[cnt].changesOfResources[i].resource == Resource.ENERGY)
+					{
+						if (localEvent.resultList[cnt].changesOfResources[i].value>0){
+							transform.Find(searchRootIcons+"/E").gameObject.GetComponent<UnityEngine.UI.Image>().sprite = greenE;
+						}
+						else
+							if (localEvent.resultList[cnt].changesOfResources[i].value<0){
+								transform.Find(searchRootIcons+"/E").gameObject.GetComponent<UnityEngine.UI.Image>().sprite = redE;
+							}
+							else
+								transform.Find(searchRootIcons+"/E").gameObject.GetComponent<UnityEngine.UI.Image>().sprite = yellowE;
+							
+							
+					}
+					if (localEvent.resultList[cnt].changesOfResources[i].resource == Resource.OXYGEN)
+					{
+						if (localEvent.resultList[cnt].changesOfResources[i].value>0){
+							transform.Find(searchRootIcons+"/O").gameObject.GetComponent<UnityEngine.UI.Image>().sprite = greenO;
+						}
+						else
+							if (localEvent.resultList[cnt].changesOfResources[i].value<0){
+								transform.Find(searchRootIcons+"/O").gameObject.GetComponent<UnityEngine.UI.Image>().sprite = redO;
+							}
+							else
+								transform.Find(searchRootIcons+"/O").gameObject.GetComponent<UnityEngine.UI.Image>().sprite = yellowO;
+							
+					}
+					
+					if (localEvent.resultList[cnt].changesOfResources[i].resource == Resource.HAPPINESS)
+					{
+						if (localEvent.resultList[cnt].changesOfResources[i].value>0){
+							transform.Find(searchRootIcons+"/H").gameObject.GetComponent<UnityEngine.UI.Image>().sprite = greenH;
+						}
+						else
+							if (localEvent.resultList[cnt].changesOfResources[i].value<0){
+								transform.Find(searchRootIcons+"/H").gameObject.GetComponent<UnityEngine.UI.Image>().sprite = redH;
+							}
+							else
+								transform.Find(searchRootIcons+"/H").gameObject.GetComponent<UnityEngine.UI.Image>().sprite = yellowH;
+							
+					}
+				
+				}
+
 				cnt++;
 			}
 		if (cnt<3)
