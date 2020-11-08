@@ -101,7 +101,6 @@ public class Room : MonoBehaviour
 						eventManager.initEventByID(roomEvent.idNextStage, this.gameObject);	
 					}
 			}
-			//Debug.Log("event updated in room" + this.gameObject.name + " current event - " + roomEvent.description);
 		}
 	}
 
@@ -131,7 +130,6 @@ public class Room : MonoBehaviour
 		foreach (ResourceItem kek in rndChange.changesOfResources)
 			resourceManager.ChangeValueResource(kek.resource, kek.value);
 		GameObject.FindWithTag("Punishment").GetComponent<PunishScreen>().PunishAdd(ans);
-		//Debug.Log("PUNIIIIIIIIIIIIIIIIIIIIIIISH "+ descs[indx]);
 	}
 	
 	public void PunishLoader()

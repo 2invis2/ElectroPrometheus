@@ -152,7 +152,6 @@ public class EventUIControls : MonoBehaviour
 		transform.Find("Solved/SolvedText").gameObject.GetComponent<UnityEngine.UI.Text>().text = results[optionNum];
 		StateChange();
 		this.gameObject.transform.parent.GetComponent<Room>().ChangeResource(optionNum);
-		//Debug.Log("event " + eventID + " resolved by choosing " + optionNum);
 	}
 	
 	public void OnClickExit()
