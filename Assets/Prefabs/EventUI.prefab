@@ -1404,7 +1404,7 @@ GameObject:
   - component: {fileID: 8946648120777142762}
   m_Layer: 5
   m_Name: EventUI
-  m_TagString: Untagged
+  m_TagString: Event
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

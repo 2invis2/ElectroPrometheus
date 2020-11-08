@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using JetBrains.Annotations;
+using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class Director : MonoBehaviour
@@ -21,6 +23,7 @@ public class Director : MonoBehaviour
 
     public void UpdateTurn()
     {
+
         foreach(GameObject room in rooms)
         {
             room.GetComponent<Room>().UpdateEvent();			
@@ -50,11 +53,77 @@ public class Director : MonoBehaviour
 				Debug.Log(" спаун в комнате - " + randomFreeRoom1);
 				CreateEventByTypeRandom(TypeEvent.GREEN, rooms[randomFreeRoom1]);
 			}
+
+		Finish();
 		
+	}
 
-    }
+	private void Finish()
+    {
+		if (isBadEnd())
+		{
+			BadEnd();
+		}
+		else
+		{
+			if (isHappyEnd())
+			{
+				HappyEnd();
+			}
+		}
+	}
 
-    private void CreateEventByType(TypeEvent type, GameObject roomTo)
+	private bool isHappyEnd()
+	{
+		int time = resourceManager.GetValueResource(Resource.TIME_BEFORE_LANDING);
+		int maxTime = resourceManager.GetMaxValueResource(Resource.TIME_BEFORE_LANDING);
+		Debug.Log("Time " + time);
+
+		return (time <= -maxTime);
+	}
+
+	private bool isBadEnd()
+	{
+		int energy = resourceManager.GetValueResource(Resource.ENERGY);
+		int oxy = resourceManager.GetValueResource(Resource.OXYGEN);
+		int happiness = resourceManager.GetValueResource(Resource.HAPPINESS);
+
+		return (energy <= 0) || (oxy <= 0) || (happiness <= 0);
+	}
+
+	private void BadEnd()
+    {
+		TheEndUI theEnd = this.GetComponent<TheEndUI>();
+		GameObject[] events = GameObject.FindGameObjectsWithTag("Event");
+
+		for (int i = 0; i < events.Length; i++)
+		{
+			Destroy(events[i]);
+		}
+
+		theEnd.showBadEnd();
+	}
+
+	private void HappyEnd()
+    {
+		TheEndUI theEnd = this.GetComponent<TheEndUI>();
+		GameObject[] events = GameObject.FindGameObjectsWithTag("Event");
+		for (int i = 0; i < events.Length; i++)
+		{
+			Destroy(events[i]);
+		}
+
+		if (isBadEnd())
+		{
+			
+		}
+		else
+		{
+			theEnd.showHappyEnd();
+		}
+	}
+
+	private void CreateEventByType(TypeEvent type, GameObject roomTo)
     {
         eventManager.initEventByTag(type.ToString(), roomTo);
     }
