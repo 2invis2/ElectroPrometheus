@@ -13,7 +13,7 @@ public class Director : MonoBehaviour
     private ResourceManager resourceManager;
     private EventManager eventManager;
 
-    public void Awake()
+    public void Start()
     {
         resourceManager = resourceManagerOBJ.GetComponent<ResourceManager>();
         eventManager = eventManagerOBJ.GetComponent<EventManager>();
