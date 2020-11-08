@@ -378,7 +378,7 @@
 		<int>7</int>
 	  </roomIDs>
       <types>
-        <string>YELLOW </string>
+        <string>YELLOW</string>
       </types>
       <turns>1</turns>
       <title>Юбилей управляющей компании</title>

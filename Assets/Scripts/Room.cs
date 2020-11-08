@@ -13,7 +13,7 @@ public class Room : MonoBehaviour
     private EventManager eventManager;
 	private Director director;
 	private EventUIControls eventUIControls;
-	private bool inEvent;
+	public bool inEvent;
     public Event roomEvent;
     public int eventStatus;
     public string descriptionRoom;
@@ -71,6 +71,8 @@ public class Room : MonoBehaviour
 	public void onEventSolved()
 	{
 		inEvent = false;
+		Destroy(eventUIControlsOBJ);
+		eventStatus = -1;
 		director.UpdateTurn();
 	}
 	
@@ -79,8 +81,8 @@ public class Room : MonoBehaviour
 		if (inEvent)
 		{
 			eventStatus--;
-			if (eventStatus == 0)
-				if (roomEvent.id == roomEvent.idNextStage)
+			if (eventStatus <= 0)
+				if (roomEvent.types[0]=="RED")
 				{
 					ChangeResource(0);
 					Destroy(eventUIControlsOBJ);
@@ -90,10 +92,9 @@ public class Room : MonoBehaviour
 					{
 						Destroy(eventUIControlsOBJ);
 						inEvent = false;
-						eventManager.initEventByID(roomEvent.idNextStage, this.gameObject);
-						
+						eventManager.initEventByID(roomEvent.idNextStage, this.gameObject);	
 					}
-			Debug.Log("eventupdated " + this.gameObject.name);
+			Debug.Log("event updated in room" + this.gameObject.name + " current event - " + roomEvent.description);
 		}
 	}
 
