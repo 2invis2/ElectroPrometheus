@@ -78,7 +78,7 @@ public class EventUIControls : MonoBehaviour
 				string searchRootIcons = "SelectionScreen/Solution"+cnt+"/ResultIcons";
 				transform.Find(searchRoot).gameObject.GetComponent<UnityEngine.UI.Text>().text = option;
 				int lmt = localEvent.resultList.Count;
-				for (int i = 0; i<lmt; i++)
+				for (int i = 0; i < lmt+1; i++)
 				{
 					if (localEvent.resultList[cnt].changesOfResources[i].resource == Resource.ENERGY)
 					{
