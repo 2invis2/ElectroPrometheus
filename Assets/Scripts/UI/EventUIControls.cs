@@ -143,7 +143,7 @@ public class EventUIControls : MonoBehaviour
 			if (state == "Select")
 				state = "OnlyAlarm";
 		StateChange();
-		GameObject.FindWithTag("MainCamera").GetComponent<CameraControl>().ClipCamera(this.gameObject.transform);
+		GameObject.FindWithTag("MainCamera").GetComponent<CameraControl>().ClipCamera(this.gameObject.transform, 2.5f, true);
 	}
 	
 	public void OnClickOption(int optionNum)

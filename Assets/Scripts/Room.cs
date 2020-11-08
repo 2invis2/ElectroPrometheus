@@ -127,8 +127,10 @@ public class Room : MonoBehaviour
 		int ln = descs.Count;
 		int indx = Random.Range(0, ln);
 		Result rndChange = res[indx];
+		string ans = descs[indx];
 		foreach (ResourceItem kek in rndChange.changesOfResources)
 			resourceManager.ChangeValueResource(kek.resource, kek.value);
+		GameObject.FindWithTag("Punishment").GetComponent<PunishScreen>().PunishAdd(ans);
 		Debug.Log("PUNIIIIIIIIIIIIIIIIIIIIIIISH "+ descs[indx]);
 	}
 	

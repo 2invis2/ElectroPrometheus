@@ -34,16 +34,18 @@ public class CameraControl : MonoBehaviour
 			transform.position -= transform.up * Time.deltaTime * currentSpeed;
 	}
 	
-	public void ClipCamera(Transform obj)
+	public void ClipCamera(Transform obj, float sizeC, bool stopif)
 	{
-		transform.position = obj.position;
-		transform.Find("Main Camera").gameObject.GetComponent<Camera>().orthographicSize = 2.5f;
-		currentSpeed = 0;
+		transform.position = new Vector3(obj.position.x, obj.position.y, transform.position.z);
+		transform.Find("Main Camera").gameObject.GetComponent<Camera>().orthographicSize = sizeC;
+		if (stopif)
+			currentSpeed = 0;
 	}
 	
 	public void UnclipCamera()
 	{
-		currentSpeed = speed;	
-		transform.Find("Main Camera").gameObject.GetComponent<Camera>().orthographicSize = 10f;		
-	}
+		currentSpeed = speed;
+		Debug.Log("UNCCCCCLIPPPPEDDD");
+		transform.Find("Main Camera").gameObject.GetComponent<Camera>().orthographicSize = 10f;	
+	}	
 }
