@@ -135,13 +135,13 @@ TextureImporter:
       name: MenyButtons_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 737.3334
-        width: 946
-        height: 368.66666
+        x: 83
+        y: 737
+        width: 794
+        height: 369
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 75}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -156,12 +156,12 @@ TextureImporter:
       name: MenyButtons_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 369.33334
-        width: 946
-        height: 368.66666
+        x: 67
+        y: 418
+        width: 796
+        height: 301
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -177,12 +177,12 @@ TextureImporter:
       name: MenyButtons_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1.3333435
-        width: 946
-        height: 368.66666
+        x: 64
+        y: 71
+        width: 810
+        height: 283
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
