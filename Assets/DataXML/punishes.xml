@@ -1,0 +1,15 @@
+<id>0</id>
+<description>blabla</description>
+<Result>
+          <changesOfResources>
+            <ResourceItem>
+              <resource>ENERGY</resource>
+			  <value>-1</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>OXYGEN</resource>
+              <value>-1</value>
+            </ResourceItem>
+          
+	  </changesOfResources>
+        </Result>

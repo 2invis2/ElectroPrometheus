@@ -81,10 +81,12 @@ public class Room : MonoBehaviour
 		if (inEvent)
 		{
 			eventStatus--;
+			
 			if (eventStatus <= 0)
+			{
 				if (roomEvent.types[0]=="RED")
 				{
-					ChangeResource(0);
+					Punish();
 					Destroy(eventUIControlsOBJ);
 					inEvent = false;
 				}
@@ -94,6 +96,7 @@ public class Room : MonoBehaviour
 						inEvent = false;
 						eventManager.initEventByID(roomEvent.idNextStage, this.gameObject);	
 					}
+			}
 			Debug.Log("event updated in room" + this.gameObject.name + " current event - " + roomEvent.description);
 		}
 	}
@@ -106,5 +109,10 @@ public class Room : MonoBehaviour
         {
             resourceManager.ChangeValueResource(changesResource.resource, changesResource.value);
         }
+	}
+	
+	public void Punish()
+	{
+		Debug.Log("bad boy");
 	}
 }

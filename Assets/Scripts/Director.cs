@@ -27,6 +27,7 @@ public class Director : MonoBehaviour
         }
 		
 		List<int> freeRooms = FreeRooms();
+		Debug.Log(freeRooms.Count);
 		if (freeRooms.Count>(13-eventLimit))
 		{
 			int random1 = Random.Range(0, (freeRooms.Count-1));

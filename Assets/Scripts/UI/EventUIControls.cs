@@ -65,8 +65,8 @@ public class EventUIControls : MonoBehaviour
 				transform.Find(searchRoot).gameObject.GetComponent<UnityEngine.UI.Text>().text = option;
 				cnt++;
 			}
-		if (cnt<5)
-			for (int i = cnt; i < 5; i++)
+		if (cnt<3)
+			for (int i = cnt; i < 3; i++)
 				{
 					string searchRoot = "SelectionScreen/Solution"+i;
 					Destroy(transform.Find(searchRoot).gameObject);
