@@ -91,10 +91,17 @@ public class Director : MonoBehaviour
     {
 		TheEndUI theEnd = this.GetComponent<TheEndUI>();
 		GameObject[] events = GameObject.FindGameObjectsWithTag("Event");
+		GameObject[] punish = GameObject.FindGameObjectsWithTag("Punishment");
 
 		for (int i = 0; i < events.Length; i++)
 		{
 			Destroy(events[i]);
+		}
+
+		for (int i = 0; i < punish.Length; i++)
+		{
+			Destroy(punish[i]);
+
 		}
 
 		theEnd.showBadEnd();
@@ -104,19 +111,21 @@ public class Director : MonoBehaviour
     {
 		TheEndUI theEnd = this.GetComponent<TheEndUI>();
 		GameObject[] events = GameObject.FindGameObjectsWithTag("Event");
+		GameObject[] punish = GameObject.FindGameObjectsWithTag("Punishment");
+
 		for (int i = 0; i < events.Length; i++)
 		{
 			Destroy(events[i]);
 		}
 
-		if (isBadEnd())
+		for (int i = 0; i < punish.Length; i++)
 		{
-			
+			Destroy(punish[i]);
+
 		}
-		else
-		{
-			theEnd.showHappyEnd();
-		}
+		
+		theEnd.showHappyEnd();
+
 	}
 
 	private void CreateEventByType(TypeEvent type, GameObject roomTo)
