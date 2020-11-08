@@ -143,7 +143,7 @@ public class EventUIControls : MonoBehaviour
 			if (state == "Select")
 				state = "OnlyAlarm";
 		StateChange();
-		GameObject.FindWithTag("MainCamera").GetComponent<CameraControl>().ClipCamera(this.gameObject.transform, 2.5f, true);
+		GameObject.FindWithTag("CC").GetComponent<CameraControl>().ClipCamera(this.gameObject.transform, 2.5f, true);
 	}
 	
 	public void OnClickOption(int optionNum)
@@ -157,7 +157,7 @@ public class EventUIControls : MonoBehaviour
 	
 	public void OnClickExit()
 	{
-		GameObject.FindWithTag("MainCamera").GetComponent<CameraControl>().UnclipCamera();
+		GameObject.FindWithTag("CC").GetComponent<CameraControl>().UnclipCamera();
 		this.gameObject.transform.parent.GetComponent<Room>().onEventSolved();
 		Destroy(this.gameObject);
 	}

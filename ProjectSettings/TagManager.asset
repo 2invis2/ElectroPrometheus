@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Event
   - Punishment
+  - CC
   layers:
   - Default
   - TransparentFX

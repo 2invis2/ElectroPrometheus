@@ -25,7 +25,7 @@ public class PunishScreen : MonoBehaviour
 	{
 		this.gameObject.transform.Find("Text").gameObject.GetComponent<UnityEngine.UI.Text>().text=Desc;
 		PunishOn();
-		GameObject.FindWithTag("MainCamera").GetComponent<CameraControl>().ClipCamera(this.gameObject.transform, 10f, false);
+		GameObject.FindWithTag("CC").GetComponent<CameraControl>().ClipCamera(this.gameObject.transform, 10f, false);
 	}
 	
 	public void PunishOn()

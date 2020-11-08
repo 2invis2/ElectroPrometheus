@@ -2309,7 +2309,7 @@ GameObject:
   - component: {fileID: 1208617631}
   m_Layer: 0
   m_Name: FieldOfView
-  m_TagString: MainCamera
+  m_TagString: CC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
