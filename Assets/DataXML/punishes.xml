@@ -1,15 +1,33 @@
-<id>0</id>
-<description>blabla</description>
-<Result>
-          <changesOfResources>
-            <ResourceItem>
-              <resource>ENERGY</resource>
-			  <value>-1</value>
-            </ResourceItem>
-			<ResourceItem>
-              <resource>OXYGEN</resource>
-              <value>-1</value>
-            </ResourceItem>
-          
-	  </changesOfResources>
-        </Result>
+<?xml version="1.0"?>
+<PunishClass xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Description>
+    <string>First punish</string>
+    <string>Second punish</string>
+  </Description>
+  <Effect>
+    <Result>
+      <changesOfResources>
+        <ResourceItem>
+          <resource>ENERGY</resource>
+          <value>-5</value>
+        </ResourceItem>
+        <ResourceItem>
+          <resource>OXYGEN</resource>
+          <value>3</value>
+        </ResourceItem>
+      </changesOfResources>
+    </Result>
+    <Result>
+      <changesOfResources>
+        <ResourceItem>
+          <resource>HAPPINESS</resource>
+          <value>-3</value>
+        </ResourceItem>
+        <ResourceItem>
+          <resource>OXYGEN</resource>
+          <value>1</value>
+        </ResourceItem>
+      </changesOfResources>
+    </Result>
+  </Effect>
+</PunishClass>

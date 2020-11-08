@@ -15,9 +15,11 @@ public class XMLParser : MonoBehaviour
 	{
 		instanceParser = this;
 		LoadEvents();
+		LoadPunishes();
 	}
 	
 	public EventDatabase eventDB;
+	public PunishClass pnsh;
 	
 	public void SaveEvents()
 	{
@@ -35,6 +37,22 @@ public class XMLParser : MonoBehaviour
 		stream.Close();
 	}
 	
+	public void LoadPunishes()
+	{
+		XmlSerializer serializer = new XmlSerializer(typeof(PunishClass));
+		FileStream stream = new FileStream(Application.dataPath + "/DataXML/punishes.xml", FileMode.Open);
+		pnsh = serializer.Deserialize(stream) as PunishClass;
+		stream.Close();
+	}
+	
+	public void SavePunishes()
+	{
+		XmlSerializer serializer = new XmlSerializer(typeof(PunishClass));
+		FileStream stream = new FileStream(Application.dataPath + "/DataXML/punishes.xml", FileMode.Open);
+		serializer.Serialize(stream, pnsh);
+		stream.Close();
+	}
+	
 	public static Event GetShittyEvent()
 	{
 		return instanceParser.eventDB.gameEvents.Find(ev => ev.id == 0);
@@ -49,6 +67,7 @@ public class XMLParser : MonoBehaviour
 	{
 		return instanceParser.eventDB.gameEvents.Find(ev => ev.types.Contains(neededTag));
 	}
+	
     
 	public static Event GetEventByTagRandom(string neededTag)
 	{

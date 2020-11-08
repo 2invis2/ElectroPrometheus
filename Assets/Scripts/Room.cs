@@ -6,7 +6,7 @@ public class Room : MonoBehaviour
 {
 	public List<string> punishesDesc;
 	public List<Result> punishesEff;
-	
+	public GameObject ParserL;
 	public GameObject resourceManagerOBJ;
     public GameObject eventManagerOBJ;
     public GameObject eventUIControlsOBJ;
@@ -43,7 +43,7 @@ public class Room : MonoBehaviour
         eventStatus = roomEvent.turns;
 		InitEventUI();
 		inEvent = true;
-		
+		PunishLoader();	
     }
 
     public string ShowMessageDescription()
@@ -130,6 +130,12 @@ public class Room : MonoBehaviour
 		foreach (ResourceItem kek in rndChange.changesOfResources)
 			resourceManager.ChangeValueResource(kek.resource, kek.value);
 		Debug.Log("PUNIIIIIIIIIIIIIIIIIIIIIIISH "+ descs[indx]);
+	}
+	
+	public void PunishLoader()
+	{
+		punishesDesc = ParserL.GetComponent<XMLParser>().pnsh.Description;
+		punishesEff = ParserL.GetComponent<XMLParser>().pnsh.Effect;
 	}
 		
 }

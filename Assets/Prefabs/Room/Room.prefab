@@ -133,12 +133,13 @@ MonoBehaviour:
     - resource: 0
       value: -1
     - resource: 1
-      value: -1
-    - resource: 0
-      value: -1
+      value: -10
+    - resource: 3
+      value: 10
   - changesOfResources:
     - resource: 0
-      value: -3
+      value: -10
+  ParserL: {fileID: 5958981730179695230, guid: 0484942380b9cc44eaf2cb9465f5a480, type: 3}
   resourceManagerOBJ: {fileID: 0}
   eventManagerOBJ: {fileID: 0}
   eventUIControlsOBJ: {fileID: 0}

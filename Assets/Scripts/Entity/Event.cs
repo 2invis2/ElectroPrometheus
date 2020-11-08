@@ -28,3 +28,10 @@ public class Result
 {
     public List<ResourceItem> changesOfResources;
 }
+
+[System.Serializable]
+public class PunishClass
+{
+	public List<string> Description;
+	public List<Result> Effect;
+}
