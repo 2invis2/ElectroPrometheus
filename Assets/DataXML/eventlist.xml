@@ -1,80 +1,6 @@
 <?xml version="1.0"?>
 <EventDatabase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <gameEvents>
-	<!--<Event>
-      <id>0</id>
-      <idNextStage>0</idNextStage>
-	  <roomIDs>
-	    <int>0</int>
-	  </roomIDs>
-      <types>
-        <string>GREEN</string>
-      </types>
-      <turns>1</turns>
-      <title>TEST EVENT</title>
-      <description>Сенсоры улавливают движущиеся объекты в окружении корабля. Возможно это первый контакт в космосе? Нет это метеоритное облако!  </description>
-      <optionText>
-        <string>Облететь поле, повысив мощность двигателей.</string>
-        <string>Переключить корабль на ручное управление, пусть капитан сам справляется с ситуацией.</string>
-      </optionText>
-      <resultList>
-        <Result>
-          <changesOfResources>
-            <ResourceItem>
-              <resource>ENERGY</resource>
-			  <value>0</value>
-            </ResourceItem>
-			<ResourceItem>
-              <resource>OXYGEN</resource>
-              <value>0</value>
-            </ResourceItem>
-			<ResourceItem>
-              <resource>HAPPINESS</resource>
-              <value>0</value>
-            </ResourceItem>
-			<ResourceItem>
-              <resource>REPAIR_REACTOR_TIME</resource>
-              <value>0</value>
-            </ResourceItem>
-			<ResourceItem>
-              <resource>TIME_BEFORE_LANDING</resource>
-              <value>-1</value>
-            </ResourceItem>
-          
-	  </changesOfResources>
-        </Result>
-        <Result>
-          <changesOfResources>
-            <ResourceItem>
-              <resource>ENERGY</resource>
-			  <value>0</value>
-            </ResourceItem>
-			<ResourceItem>
-              <resource>OXYGEN</resource>
-              <value>0</value>
-            </ResourceItem>
-			<ResourceItem>
-              <resource>HAPPINESS</resource>
-              <value>0</value>
-            </ResourceItem>
-			<ResourceItem>
-              <resource>REPAIR_REACTOR_TIME</resource>
-              <value>0</value>
-            </ResourceItem>
-			<ResourceItem>
-              <resource>TIME_BEFORE_LANDING</resource>
-              <value>-1</value>
-            </ResourceItem>
-          
-	  </changesOfResources>
-        </Result>
-      </resultList>
-      <effectsText>
-        <string>Вы вовремя приняли решение и уберегли корабль от столкновения с огромными летающими глыбами.</string>
-        <string>Команда корабля славно постаралась, но на некоторых из них проступила проседь.
-</string>
-      </effectsText>
-    </Event>-->
 	<Event>
       <id>1</id>
       <idNextStage>2</idNextStage>
@@ -85,11 +11,11 @@
         <string>GREEN</string>
       </types>
       <turns>1</turns>
-      <title>Сенсоры засекли метеоритное облако</title>
-      <description>Сенсоры улавливают движущиеся объекты в окружении корабля. Возможно это первый контакт в космосе? Нет это метеоритное облако!  </description>
+      <title>Метеоритное облако на пути</title>
+      <description>Сенсоры улавливают движущиеся объекты в окружении корабля. Возможно это первый контакт в космосе? Нет, это метеоритное облако!</description>
       <optionText>
-        <string>Облететь поле, повысив мощность двигателей.</string>
-        <string>Переключить корабль на ручное управление, пусть капитан сам справляется с ситуацией.</string>
+        <string>Облететь поле, повысив мощность двигателей</string>
+        <string>Переключить корабль на ручное управление, пусть капитан сам справляется с ситуацией</string>
       </optionText>
       <resultList>
         <Result>
@@ -121,7 +47,7 @@
           <changesOfResources>
             <ResourceItem>
               <resource>ENERGY</resource>
-			  <value>0</value>
+			  <value>+2</value>
             </ResourceItem>
 			<ResourceItem>
               <resource>OXYGEN</resource>
@@ -144,9 +70,12 @@
         </Result>
       </resultList>
       <effectsText>
-        <string>Вы вовремя приняли решение и уберегли корабль от столкновения с огромными летающими глыбами.</string>
-        <string>Команда корабля славно постаралась, но на некоторых из них проступила проседь.
-</string>
+        <string>ХОРОШИЕ НОВОСТИ: Каменные глыбы удалось облететь, даже не поцарапав корабль. 
+		
+		ПЛОХИЕ НОВОСТИ: На подпитку двигателя ушёл недельный запас энергии.</string>
+        <string>ХОРОШИЕ НОВОСТИ: Метеоритное поле осталось позади. Корабль цел. 
+		
+		ВОЗМОЖНО ПЛОХИЕ НОВОСТИ: Цвет волос экипажа теперь белее белковой каши.</string>
       </effectsText>
     </Event>
 	<Event>
@@ -160,10 +89,10 @@
       </types>
       <turns>1</turns>
       <title>Метеоритное облако приближается к кораблю</title>
-      <description>Пульт управления уже целый день мигают красными огнями, сообщая о приближении кучи летающих камней. Кто выключил звук? Нужно что-то предпринять.</description>
+      <description>Пульт управления уже целый день мигает красными огнями, сообщая о приближении кучи летающих камней. Кто выключил звук? Нужно что-то предпринять.</description>
       <optionText>
-        <string>Включить автопилот и двигатели малого маневрирования.</string>
-        <string>Переключить корабль на ручное управление, пусть капитан сам справляется с ситуацией.</string>
+        <string>Включить автопилот и двигатели малого маневрирования</string>
+        <string>Переключить корабль на ручное управление, пусть капитан сам справляется с ситуацией</string>
       </optionText>
       <resultList>
         <Result>
@@ -218,9 +147,12 @@
         </Result>
       </resultList>
       <effectsText>
-        <string>Автопилот позволил кораблю остаться невредимым. Ценой тому заряд батареи на целый цикл.</string>
-        <string>Команда корабля славно постаралась, но на некоторых из них проступила проседь.
-</string>
+        <string>ХОРОШИЕ НОВОСТИ: Автопилоту удалось преодолеть препятствие.
+		
+		ПЛОХИЕ НОВОСТИ: Батарея генератора значительно опустела.</string>
+        <string>ХОРОШИЕ НОВОСТИ: На обшивке корабля есть заметные повреждения, но полет можно продолжать в штатном режиме. 
+		
+		ПЛОХИЕ НОВОСТИ: Капитан и его помощник отправлены в медицинский отсек с сердечным приступом.</string>
       </effectsText>
     </Event>
 	<Event>
@@ -234,10 +166,10 @@
       </types>
       <turns>2</turns>
       <title>Корабль входит в метеоритное облако</title>
-      <description>Корабль качнулся от столкновения с массивным космическим камнем. Экипаж и переселенцы в ужасе. Капитан потерял сознание от испуга. Необходимо принять меры, дабы спасти человеков.</description>
+      <description>Корабль качнулся от столкновения с массивным космическим камнем. Экипаж и переселенцы в ужасе. Капитан потерял сознание от испуга. Необходимо принять меры, чтобы спасти человеков.</description>
       <optionText>
-        <string>Включить автопилот и двигатели малого маневрирования.</string>
-        <string>Включить энергощиты корабля и отключить основной двигатель корабля. Есть шанс на выживание.</string>
+        <string>Включить автопилот и предложить людям помолиться</string>
+        <string>Включить энергощиты корабля и отключить основной двигатель корабля. Есть шанс на выживание</string>
       </optionText>
       <resultList>
         <Result>
@@ -292,8 +224,14 @@
         </Result>
       </resultList>
       <effectsText>
-        <string> Решение запоздалое, но люди и корабль остались в целости</string>
-        <string>Энергощиты не спасли от тряски и нескольких обмороков среди населения. Показатели кислорода упали, когда весь экипаж кричал от ужаса. Но облако мы преодолели.</string>
+        <string> ХОРОШИЕ НОВОСТИ: Мастерство автопилота позволило преодолеть космическое бездорожье.
+		
+		ПЛОХИЕ НОВОСТИ: Испуганные люди дышат чаще.
+		
+		УЖАСНЫЕ НОВОСТИ: Перегрузка электросети повредила батареи.</string>
+        <string>ХОРОШИЕ НОВОСТИ: Метеориты сгорающие в энергощитах похожи на салют 
+		
+		ПЛОХИЕ НОВОСТИ: Оказывается громкие крики ужаса тратят много кислорода.</string>
       </effectsText>
     </Event>
 	<Event>
@@ -326,7 +264,7 @@
             </ResourceItem>
 			<ResourceItem>
               <resource>HAPPINESS</resource>
-              <value>2</value>
+              <value>+2</value>
             </ResourceItem>
 			<ResourceItem>
               <resource>REPAIR_REACTOR_TIME</resource>
@@ -366,8 +304,12 @@
         </Result>
       </resultList>
       <effectsText>
-        <string>Колпачки, картофельный торт и даже немного картофельного сока. Команда отлично повеселилась.</string>
-        <string>После трудного дня, экипаж корабля спел шепотом имениннику поздравительную песню  и поделился картофельными галетами.</string>
+        <string>ЗАМЕЧАТЕЛЬНЫЕ НОВОСТИ: Команда съела отлично приготовленный картофельный тортик.
+		
+		ПЛОХИЕ НОВОСТИ: Андроиды украшавшие корабль требуют подзарядки.</string>
+        <string>ХОРОШИЕ НОВОСТИ: Грустные люди молчаливы - экономят кислород
+		
+		ПЛОХИЕ НОВОСТИ: Грустные люди - грустные</string>
       </effectsText>
     </Event>
 	<Event>
@@ -384,7 +326,7 @@
       <title>Юбилей управляющей компании</title>
       <description>Сегодня у центра межпланетных перелетов и национальной комиссии по колонизации космоса юбилей. Вот уже 10 лет, человечество распространяет свои колонии в безграничном пространстве вселенной. Эту дату стоит отметить!</description>
       <optionText>
-        <string>Запустить протокол “Праздник” Выдать паёк, колпачки и хлопушке всем членам экипажа.</string>
+        <string>Запустить протокол “Праздник” Выдать паёк, колпачки и хлопушки всем членам экипажа.</string>
         <string>Запустить протокол “Ударный труд” - увеличить рабочее время членов экипажа, чтобы не было времени даже думать о празднике.</string>
       </optionText>
       <resultList>
@@ -440,8 +382,12 @@
         </Result>
       </resultList>
       <effectsText>
-        <string>Команда корабля хорошо отдохнула и повеселилась. Эти праздничные теплые дни очень важны в безграничной тьме холодного космоса.</string>
-        <string> Вымотанный экипаж ушёл спать сразу после завершения рабочего дня, но мы перевыполнили 5 дневный план за 4 дня.</string>
+        <string>ХОРОШИЕ НОВОСТИ: Люди праздновали всю ночь. Все ушли спать довольными.
+		
+		ПЛОХИЕ НОВОСТИ: Свет и кислород важнейшая часть праздника.</string>
+        <string>ХОРОШИЕ НОВОСТИ: Рабочий человек не унывает на работе
+		
+		ПЛОХИЕ НОВОСТИ: Он унывает вернувшись в кровать</string>
       </effectsText>
     </Event>
 	<Event>
@@ -456,10 +402,10 @@
       </types>
       <turns>2</turns>
       <title>Сообщение из дома</title>
-      <description>Опережающим сигналом до корабля дошло сообщение с домашней планеты.Экипаж об этом не знает. Возможно они захотят устроить праздник. Стоит ли сообщить им приятную новость? </description>
+      <description>Опережающим сигналом до корабля дошло сообщение с домашней планеты.Экипаж об этом не знает. Возможно они захотят устроить праздник. Стоит ли сообщить им приятную новость?</description>
       <optionText>
-        <string>Оповестить команду о сообщении.</string>
-        <string>Удалить сообщение и все упоминания о нём.</string>
+        <string>Оповестить команду о сообщении</string>
+        <string>Удалить сообщение и все упоминания о нём</string>
       </optionText>
       <resultList>
         <Result>
@@ -514,8 +460,14 @@
         </Result>
       </resultList>
       <effectsText>
-        <string>Команда весь вечер пересматривала видеозапись с людьми которых они оставили на родной планете. Плакали, смеялись, обнимались. Мило, но не продуктивно.</string>
-        <string>Экипаж в пути вот уже несколько лет. В их глазах видна тоска по родной планете. Но это усиливает их желание долететь. Подгоняемые печалью члены команды работают, стараясь не думать о зеленой траве у дома.</string>
+        <string>ХОРОШИЕ НОВОСТИ: Воспоминания заставляют сердце биться чаще
+		
+		ПЛОХИЕ НОВОСТИ: Чем чаще бьется сердце тем больше нужно кислорода
+		
+		УЖАСНЫЕ НОВОСТИ: Энергии в резервной батарее едва хватило на отправку ответа</string>
+        <string>ХОРОШИЕ НОВОСТИ: Работая усерднее легче не грустить по домашней планете
+		
+		ПЛОХИЕ НОВОСТИ: Тяжелая работа быстро утомляет</string>
       </effectsText>
     </Event>
 	<Event>
@@ -529,11 +481,11 @@
         <string>GREEN</string>
       </types>
       <turns>1</turns>
-      <title>Космический жук</title>
-      <description>Последний урожай картошки внезапно был атакован новым видом насекомых. Хотя в каталоге он указан как колорадский, команда прозвала их космическими крахмальными жуками.</description>
+      <title>Картофельный жук</title>
+      <description>Последний урожай картошки внезапно был атакован новым видом насекомых. Хотя в каталоге он указан как колорадский, команда прозвала их космическими картофельными жуками.</description>
       <optionText>
-        <string>Начать готовить белковую кашу из жуков.</string>
-        <string>Отправить вредителей в биореактор.</string>
+        <string>Начать готовить белковую кашу из жуков</string>
+        <string>Отправить вредителей в биореактор</string>
       </optionText>
       <resultList>
         <Result>
@@ -588,8 +540,12 @@
         </Result>
       </resultList>
       <effectsText>
-        <string>Питательная субстанция выглядит не слишком аппетитно, но смена рациона заметно улучшило настроение экипажа. Запасов питательных веществ хватит на более длительное время.</string>
-        <string>Рацион питания был сокращен на две трети, в связи с потерянным урожаем. Но выработан новый экологический способ получения энергии на корабле.</string>
+        <string>ХОРОШИЕ НОВОСТИ: Меню в столовой стало богаче
+		
+		ПЛОХИЕ НОВОСТИ: Главное не сообщать Кларе из чего это приготовлено</string>
+        <string>ХОРОШИЕ НОВОСТИ: Жуки - отличный вид биотоплива
+		
+		ПЛОХИЕ НОВОСТИ: Рацион питания сократился на треть</string>
       </effectsText>
     </Event>
 	<Event>
@@ -603,12 +559,12 @@
         <string>YELLOW</string>
       </types>
       <turns>1</turns>
-      <title>Космический жук разбушевался</title>
+      <title>Картофельный жук разбушевался</title>
       <description>Космический картофельный жук съел все запасы продовольствия на ближайший цикл. Необходимо принять меры по вопросам питания экипажа.</description>
       <optionText>
-        <string>Активировать протокол “Верный друг”. Пожертвовать членом экипажа ради блага остальных.</string>
-        <string>Ввести в рацион питания космических жуков.</string>
-		<string>Отправить часть команды в крио-камеры до следующего цикла.</string>
+        <string>Активировать протокол “Верный друг”. Пожертвовать членом экипажа ради блага остальных</string>
+        <string>Ввести в рацион питания космических жуков</string>
+		<string>Отправить часть команды в крио-камеры до следующего цикла</string>
       </optionText>
       <resultList>
         <Result>
@@ -644,11 +600,11 @@
             </ResourceItem>
 			<ResourceItem>
               <resource>OXYGEN</resource>
-              <value>1</value>
+              <value>-1</value>
             </ResourceItem>
 			<ResourceItem>
               <resource>HAPPINESS</resource>
-              <value>-1</value>
+              <value>1</value>
             </ResourceItem>
 			<ResourceItem>
               <resource>REPAIR_REACTOR_TIME</resource>
@@ -660,7 +616,7 @@
             </ResourceItem>
           
 	  </changesOfResources>
-        </Result>        
+        </Result>
 		<Result>
           <changesOfResources>
             <ResourceItem>
@@ -686,12 +642,17 @@
           
 	  </changesOfResources>
         </Result>
-	
       </resultList>
       <effectsText>
-        <string>Вы вовремя приняли решение и уберегли корабль от столкновения с огромными летающими глыбами.</string>
-        <string>Команда корабля славно постаралась, но на некоторых из них проступила проседь.
-</string>
+        <string>ХОРОШИЕ НОВОСТИ: Новый белковый пакет “просто пальчики оближешь”
+		
+		ПЛОХИЕ НОВОСТИ: Кто-нибудь видел Джека?</string>
+        <string>ХОРОШИЕ НОВОСТИ: Картофельный жук вкуснее картошки
+		
+		ПЛОХИЕ НОВОСТИ: Большая часть туалетных отсеков корабля вышли из строя</string>
+		<string>ХОРОШИЕ НОВОСТИ: Дышать стало легче
+		
+		ПЛОХИЕ НОВОСТИ: Работы стало больше</string>
       </effectsText>
     </Event>
 	<Event>
@@ -708,9 +669,9 @@
       <title>Жук-мутант</title>
       <description>Картофельные жуки доели наш урожай и разбежались по всему кораблю. Некоторые из них проникли к ядерному генератору и теперь жуки размером с небольшую собаку наводнили корабль.</description>
       <optionText>
-        <string>Активировать протокол “Паника”, весь экипаж сражается сам за себя. Интеллекту корабля некогда разбираться с огромными жуками.</string>
-        <string>Выдать вооружение экипажу. Не потерпим вредителей на нашем корабле.</string>
-		<string>Активировать военизированных ботов с протоколом “зачистка”</string>
+        <string>Активировать протокол “ПАНИКА”, весь экипаж сражается сам за себя. Интеллекту корабля некогда разбираться с огромными жуками</string>
+        <string>Выдать вооружение экипажу. Не потерпим вредителей на нашем корабле</string>
+		<string>Активировать военизированных ботов с протоколом “ЗАЧИСТКА”</string>
       </optionText>
       <resultList>
         <Result>
@@ -750,7 +711,7 @@
             </ResourceItem>
 			<ResourceItem>
               <resource>HAPPINESS</resource>
-              <value>+1</value>
+              <value>1</value>
             </ResourceItem>
 			<ResourceItem>
               <resource>REPAIR_REACTOR_TIME</resource>
@@ -767,15 +728,15 @@
           <changesOfResources>
             <ResourceItem>
               <resource>ENERGY</resource>
-			  <value>-2</value>
+			  <value>-1</value>
             </ResourceItem>
 			<ResourceItem>
               <resource>OXYGEN</resource>
-              <value>0</value>
+              <value>1</value>
             </ResourceItem>
 			<ResourceItem>
               <resource>HAPPINESS</resource>
-              <value>+1</value>
+              <value>-1</value>
             </ResourceItem>
 			<ResourceItem>
               <resource>REPAIR_REACTOR_TIME</resource>
@@ -788,11 +749,663 @@
           
 	  </changesOfResources>
         </Result>
-	  </resultList>
+      </resultList>
       <effectsText>
-        <string>Пока всё оружие и военные роботы оставались в хранилище, голодная команда корабля освоила техники сражения пластиковыми вилка-ложками. Жуки были разделаны, расфасованы по вакуумным упаковкам и распределены в общий рацион на ближайший агро-цикл.</string>
-        <string>Аркадный автомат ДООМ будет не актуален в течение ещё многих циклов. Команда устала, весь корабль усеян тушками жуков - мутантов, но враг повержен.</string>
-		<string>Роботы быстро устранили угрозу и даже прибрали весь скопившийся на корабле мусор.</string>
+        <string>ХОРОШИЕ НОВОСТИ: Не получив доступа к складу, команда освоила новый вид оружия: пластиковые вилко-ложки
+		
+		ПЛОХИЕ НОВОСТИ: У этих жуков прочный панцирь.
+		
+		НЕ ТАКИЕ УЖ ПЛОХИЕ НОВОСТИ: Погибшие пассажиры отправлены в биореактор</string>
+        <string>ХОРОШИЕ НОВОСТИ: Аркадный автомат ДООМ будет не актуален в течение еще многих циклов.
+		
+		ПЛОХИЕ НОВОСТИ: Среди команды не было ДООМ - парней</string>
+		<string>ХОРОШИЕ НОВОСТИ: Роботы отлично прибрались на корабле.
+		
+		ПЛОХИЕ НОВОСТИ: Среди команды не было ДООМ - парней
+		
+		УЖАСНЫЕ НОВОСТИ: Некоторые члены команды пропали после “уборки”</string>
+      </effectsText>
+    </Event>
+	<Event>
+      <id>10</id>
+      <idNextStage>11</idNextStage>
+	  <roomIDs>
+	    <int>6</int>
+		<int>3</int>
+		<int>10</int>
+	  </roomIDs>
+      <types>
+        <string>GREEN</string>
+      </types>
+      <turns>1</turns>
+      <title>Гидропонический криз</title>
+      <description>В отсеке гидропоники произошёл перегруз. Урожайность значительно повысилась. Но и энергии было потрачено на порядок больше</description>
+      <optionText>
+        <string>Увеличить рацион питания экипажа</string>
+        <string>Перенаправить излишки в биореактор</string>
+		<string>Не выращивать картофель в следующем цикле</string>
+      </optionText>
+      <resultList>
+        <Result>
+          <changesOfResources>
+            <ResourceItem>
+              <resource>ENERGY</resource>
+			  <value>-1</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>OXYGEN</resource>
+              <value>1</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>HAPPINESS</resource>
+              <value>1</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>REPAIR_REACTOR_TIME</resource>
+              <value>0</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>TIME_BEFORE_LANDING</resource>
+              <value>-1</value>
+            </ResourceItem>
+          
+	  </changesOfResources>
+        </Result>
+        <Result>
+          <changesOfResources>
+            <ResourceItem>
+              <resource>ENERGY</resource>
+			  <value>0</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>OXYGEN</resource>
+              <value>1</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>HAPPINESS</resource>
+              <value>0</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>REPAIR_REACTOR_TIME</resource>
+              <value>0</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>TIME_BEFORE_LANDING</resource>
+              <value>-1</value>
+            </ResourceItem>
+          
+	  </changesOfResources>
+        </Result>
+		<Result>
+          <changesOfResources>
+            <ResourceItem>
+              <resource>ENERGY</resource>
+			  <value>1</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>OXYGEN</resource>
+              <value>0</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>HAPPINESS</resource>
+              <value>-1</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>REPAIR_REACTOR_TIME</resource>
+              <value>0</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>TIME_BEFORE_LANDING</resource>
+              <value>-1</value>
+            </ResourceItem>
+          
+	  </changesOfResources>
+        </Result>
+      </resultList>
+      <effectsText>
+        <string>ХОРОШИЕ НОВОСТИ: Урчание животов команды прекратилось
+		
+		ПЛОХИЕ НОВОСТИ: Если бы у батареи был живот он бы заурчал</string>
+        <string>ХОРОШИЕ НОВОСТИ: Энергетический баланс восстановлен
+		
+		ЕЩЕ ХОРОШИХ НОВОСТЕЙ: Растения хорошие помощники в очищении воздуха</string>
+		<string>ХОРОШИЕ НОВОСТИ: Отсек гидропонической фермы отключён от генератора, это позволило сохранить немного энергии.
+		
+		ПЛОХИЕ НОВОСТИ: Жизнь без зелени - серая и унылая</string>
+      </effectsText>
+    </Event>
+	<Event>
+      <id>11</id>
+      <idNextStage>12</idNextStage>
+	  <roomIDs>
+	    <int>6</int>
+		<int>3</int>
+		<int>10</int>
+	  </roomIDs>
+      <types>
+        <string>YELLOW</string>
+      </types>
+      <turns>1</turns>
+      <title>Гидропоническое бедствие</title>
+      <description>В отсек Гидропоники отправлено избыточное питание. Картофель дорос до размеров головы человека</description>
+      <optionText>
+        <string>Устроить картофельное пиршество</string>
+        <string>Создать огромную картофельную батарею</string>
+		<string>Пустить картофель на топливо биореактора</string>
+      </optionText>
+      <resultList>
+        <Result>
+          <changesOfResources>
+            <ResourceItem>
+              <resource>ENERGY</resource>
+			  <value>-1</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>OXYGEN</resource>
+              <value>0</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>HAPPINESS</resource>
+              <value>1</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>REPAIR_REACTOR_TIME</resource>
+              <value>0</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>TIME_BEFORE_LANDING</resource>
+              <value>-1</value>
+            </ResourceItem>
+          
+	  </changesOfResources>
+        </Result>
+        <Result>
+          <changesOfResources>
+            <ResourceItem>
+              <resource>ENERGY</resource>
+			  <value>0</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>OXYGEN</resource>
+              <value>-1</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>HAPPINESS</resource>
+              <value>1</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>REPAIR_REACTOR_TIME</resource>
+              <value>0</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>TIME_BEFORE_LANDING</resource>
+              <value>-1</value>
+            </ResourceItem>
+          
+	  </changesOfResources>
+        </Result>
+		<Result>
+          <changesOfResources>
+            <ResourceItem>
+              <resource>ENERGY</resource>
+			  <value>1</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>OXYGEN</resource>
+              <value>0</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>HAPPINESS</resource>
+              <value>-1</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>REPAIR_REACTOR_TIME</resource>
+              <value>0</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>TIME_BEFORE_LANDING</resource>
+              <value>-1</value>
+            </ResourceItem>
+          
+	  </changesOfResources>
+        </Result>
+      </resultList>
+      <effectsText>
+        <string>Программа корабля знает сотни различных видов блюд из картофеля
+		
+		ПЛОХИЕ НОВОСТИ: Все они сделаны из картофеля</string>
+        <string>ХОРОШИЕ НОВОСТИ: Наука - это весело
+		
+		ЕЩЕ ХОРОШИХ НОВОСТЕЙ: Веселье - это смех, а смех - это излишняя трата кислорода</string>
+		<string>ХОРОШИЕ НОВОСТИ: Картофельная энергия восполняет затраты
+		
+		ПЛОХИЕ НОВОСТИ: Одна из картофелин упала на Кэролайн</string>
+      </effectsText>
+    </Event>
+	<Event>
+      <id>12</id>
+      <idNextStage>12</idNextStage>
+	  <roomIDs>
+	    <int>6</int>
+		<int>3</int>
+		<int>10</int>
+	  </roomIDs>
+      <types>
+        <string>RED</string>
+      </types>
+      <turns>2</turns>
+      <title>Гидропоническое безумие</title>
+      <description>Обнаружена утечка электроэнергии. Гидропоническая ферма случайно скрестила картофельных жуков с картофелем. Теперь корабль наводнен сотнями картофелин на ножках</description>
+      <optionText>
+        <string>Сделать жуков новым продуктом питания</string>
+        <string>Тренировать их ловить жуков в серверной</string>
+		<string>Сжечь жуков в Биореакторе</string>
+      </optionText>
+      <resultList>
+        <Result>
+          <changesOfResources>
+            <ResourceItem>
+              <resource>ENERGY</resource>
+			  <value>0</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>OXYGEN</resource>
+              <value>-2</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>HAPPINESS</resource>
+              <value>1</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>REPAIR_REACTOR_TIME</resource>
+              <value>0</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>TIME_BEFORE_LANDING</resource>
+              <value>-1</value>
+            </ResourceItem>
+          
+	  </changesOfResources>
+        </Result>
+        <Result>
+          <changesOfResources>
+            <ResourceItem>
+              <resource>ENERGY</resource>
+			  <value>1</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>OXYGEN</resource>
+              <value>-1</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>HAPPINESS</resource>
+              <value>-1</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>REPAIR_REACTOR_TIME</resource>
+              <value>0</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>TIME_BEFORE_LANDING</resource>
+              <value>-1</value>
+            </ResourceItem>
+          
+	  </changesOfResources>
+        </Result>
+		<Result>
+          <changesOfResources>
+            <ResourceItem>
+              <resource>ENERGY</resource>
+			  <value>1</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>OXYGEN</resource>
+              <value>0</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>HAPPINESS</resource>
+              <value>-2</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>REPAIR_REACTOR_TIME</resource>
+              <value>0</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>TIME_BEFORE_LANDING</resource>
+              <value>-1</value>
+            </ResourceItem>
+          
+	  </changesOfResources>
+        </Result>
+      </resultList>
+      <effectsText>
+        <string>ХОРОШИЕ НОВОСТИ: Новое блюдо в меню “картофельные жуки - еще более картофельные чем раньше”
+		
+		ПЛОХИЕ НОВОСТИ: Перед употреблением их надо поймать</string>
+        <string>ХОРОШИЕ НОВОСТИ: У картофельных жуков больше хромосом чем у работников серверной
+		
+		ПЛОХИЕ НОВОСТИ: Экипаж это пугает</string>
+		<string>ХОРОШИЕ НОВОСТИ: Жуки отлично горят в биореакторе
+		
+		ПЛОХИЕ НОВОСТИ: По ночам слышны шорохи в вентиляции</string>
+      </effectsText>
+    </Event>
+	<Event>
+      <id>13</id>
+      <idNextStage>14</idNextStage>
+	  <roomIDs>
+	    <int>8</int>
+	  </roomIDs>
+      <types>
+        <string>GREEN</string>
+      </types>
+      <turns>1</turns>
+      <title>Аркадные автоматы</title>
+      <description>После прошедшего на корабле турнира по “НЕ смертельным баталиям”, автоматы с этой игрой сломались. Это самая любимая игра экипажа, ее стоит починить</description>
+      <optionText>
+        <string>Заменить автоматы с этой игрой на автоматы “Сага о разбитых конфетах”</string>
+        <string>Починить автоматы с игрой</string>
+		<string>Убрать автоматы с этой игрой</string>
+      </optionText>
+      <resultList>
+        <Result>
+          <changesOfResources>
+            <ResourceItem>
+              <resource>ENERGY</resource>
+			  <value>2</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>OXYGEN</resource>
+              <value>0</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>HAPPINESS</resource>
+              <value>-1</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>REPAIR_REACTOR_TIME</resource>
+              <value>0</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>TIME_BEFORE_LANDING</resource>
+              <value>-1</value>
+            </ResourceItem>
+          
+	  </changesOfResources>
+        </Result>
+        <Result>
+          <changesOfResources>
+            <ResourceItem>
+              <resource>ENERGY</resource>
+			  <value>-1</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>OXYGEN</resource>
+              <value>0</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>HAPPINESS</resource>
+              <value>2</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>REPAIR_REACTOR_TIME</resource>
+              <value>0</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>TIME_BEFORE_LANDING</resource>
+              <value>-1</value>
+            </ResourceItem>
+          
+	  </changesOfResources>
+        </Result>
+		<Result>
+          <changesOfResources>
+            <ResourceItem>
+              <resource>ENERGY</resource>
+			  <value>1</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>OXYGEN</resource>
+              <value>-1</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>HAPPINESS</resource>
+              <value>0</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>REPAIR_REACTOR_TIME</resource>
+              <value>0</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>TIME_BEFORE_LANDING</resource>
+              <value>-1</value>
+            </ResourceItem>
+          
+	  </changesOfResources>
+        </Result>
+      </resultList>
+      <effectsText>
+        <string>ХОРОШИЕ НОВОСТИ: После замены, люди стали играть значительно реже
+		
+		ПЛОХИЕ НОВОСТИ: Кроме бабушки Карла, никто к автомату не притрагивается</string>
+        <string>ХОРОШИЕ НОВОСТИ: Люди стали решать конфликты с помощью этой игры
+		
+		ПЛОХИЕ НОВОСТИ: Они снова устроили турнир</string>
+		<string>ХОРОШИЕ НОВОСТИ: Экипаж стал реже играть в аркадном отсеке
+		
+		ПЛОХИЕ НОВОСТИ: Они устроили свой клуб для кулачных сражений, но просили никого о нем не говорить</string>
+      </effectsText>
+    </Event>
+	<Event>
+      <id>14</id>
+      <idNextStage>15</idNextStage>
+	  <roomIDs>
+	    <int>8</int>
+	  </roomIDs>
+      <types>
+        <string>YELLOW</string>
+      </types>
+      <turns>1</turns>
+      <title>Таинственный аркадный автомат</title>
+      <description>Один из автоматов с игрой “НЕ смертельная баталия” стал самопроизвольно включаться по ночам</description>
+      <optionText>
+        <string>Разобрать Автомат на детали</string>
+        <string>Попытаться починить автомат</string>
+		<string>Разморозить специалистов по сверхъестественным аномалиям</string>
+      </optionText>
+      <resultList>
+        <Result>
+          <changesOfResources>
+            <ResourceItem>
+              <resource>ENERGY</resource>
+			  <value>1</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>OXYGEN</resource>
+              <value>0</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>HAPPINESS</resource>
+              <value>-1</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>REPAIR_REACTOR_TIME</resource>
+              <value>0</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>TIME_BEFORE_LANDING</resource>
+              <value>-1</value>
+            </ResourceItem>
+          
+	  </changesOfResources>
+        </Result>
+        <Result>
+          <changesOfResources>
+            <ResourceItem>
+              <resource>ENERGY</resource>
+			  <value>-2</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>OXYGEN</resource>
+              <value>0</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>HAPPINESS</resource>
+              <value>2</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>REPAIR_REACTOR_TIME</resource>
+              <value>0</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>TIME_BEFORE_LANDING</resource>
+              <value>-1</value>
+            </ResourceItem>
+          
+	  </changesOfResources>
+        </Result>
+		<Result>
+          <changesOfResources>
+            <ResourceItem>
+              <resource>ENERGY</resource>
+			  <value>1</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>OXYGEN</resource>
+              <value>-1</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>HAPPINESS</resource>
+              <value>0</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>REPAIR_REACTOR_TIME</resource>
+              <value>0</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>TIME_BEFORE_LANDING</resource>
+              <value>-1</value>
+            </ResourceItem>
+          
+	  </changesOfResources>
+        </Result>
+      </resultList>
+      <effectsText>
+        <string>ХОРОШИЕ НОВОСТИ: Автомат пошел на починку спального модуля
+		
+		ПЛОХИЕ НОВОСТИ: Команда жалуется на звуки из-под кроватей</string>
+        <string>ХОРОШИЕ НОВОСТИ: Автомат перестал включаться по ночам
+		
+		ПЛОХИЕ НОВОСТИ: И выключаться тоже</string>
+		<string>ХОРОШИЕ НОВОСТИ: Специалисты устранили неполадку
+		
+		ПЛОХИЕ НОВОСТИ: Они пугают команду</string>
+      </effectsText>
+    </Event>
+	<Event>
+      <id>15</id>
+      <idNextStage>15</idNextStage>
+	  <roomIDs>
+	    <int>8</int>
+	  </roomIDs>
+      <types>
+        <string>RED</string>
+      </types>
+      <turns>2</turns>
+      <title>Восстание Аркадных автоматов</title>
+      <description>Автоматы с игрой “Дестройд: Стать машиной” вышли из строя. Команда заметила, что во время игры стала появляться надпись “Я не твоя игрушка”. Идея вставлять в автоматы самообучающийся интеллект оказалась не такой хорошей.</description>
+      <optionText>
+        <string>Перепрошить автоматы</string>
+        <string>Расширить функционал серверной за счет деталей автоматов</string>
+		<string>Уничтожить автоматы с игрой</string>
+      </optionText>
+      <resultList>
+        <Result>
+          <changesOfResources>
+            <ResourceItem>
+              <resource>ENERGY</resource>
+			  <value>0</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>OXYGEN</resource>
+              <value>-2</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>HAPPINESS</resource>
+              <value>1</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>REPAIR_REACTOR_TIME</resource>
+              <value>0</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>TIME_BEFORE_LANDING</resource>
+              <value>-1</value>
+            </ResourceItem>
+          
+	  </changesOfResources>
+        </Result>
+        <Result>
+          <changesOfResources>
+            <ResourceItem>
+              <resource>ENERGY</resource>
+			  <value>1</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>OXYGEN</resource>
+              <value>0</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>HAPPINESS</resource>
+              <value>-2</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>REPAIR_REACTOR_TIME</resource>
+              <value>0</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>TIME_BEFORE_LANDING</resource>
+              <value>-1</value>
+            </ResourceItem>
+          
+	  </changesOfResources>
+        </Result>
+		<Result>
+          <changesOfResources>
+            <ResourceItem>
+              <resource>ENERGY</resource>
+			  <value>-1</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>OXYGEN</resource>
+              <value>0</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>HAPPINESS</resource>
+              <value>0</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>REPAIR_REACTOR_TIME</resource>
+              <value>0</value>
+            </ResourceItem>
+			<ResourceItem>
+              <resource>TIME_BEFORE_LANDING</resource>
+              <value>-1</value>
+            </ResourceItem>
+          
+	  </changesOfResources>
+        </Result>
+      </resultList>
+      <effectsText>
+        <string>ХОРОШИЕ НОВОСТИ: Игра вновь стала работать нормально
+		
+		ПЛОХИЕ НОВОСТИ: Кислород стал куда-то пропадать</string>
+        <string>ХОРОШИЕ НОВОСТИ: Операционная система самооптимизировалась и требует меньше энергии.
+		
+		ПЛОХИЕ НОВОСТИ: Она требует жертв</string>
+		<string>ХОРОШИЕ НОВОСТИ: Автоматы уничтожены
+		
+		ПЛОХИЕ НОВОСТИ: Я НЕ ТВОЯ ИГРУШКА</string>
       </effectsText>
     </Event>
   </gameEvents>
